@@ -11,5 +11,7 @@ export class BodyAppComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  getAction(algo){
+    console.log(algo)
+  }
 }
