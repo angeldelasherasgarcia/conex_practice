@@ -17,6 +17,5 @@ export class LatNavBarComponent implements OnInit {
   }
   public showModel(opcion):void{
     this.isActive = opcion;
-    console.log(this.isActive)
   }
 }

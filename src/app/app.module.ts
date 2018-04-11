@@ -9,6 +9,10 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { LatNavBarComponent } from './lat-nav-bar/lat-nav-bar.component';
+//Services to use in this projects
+import {GlobalVariableService} from '../app/services/global-variable.service';
+import { BodyAppComponent } from './body-app/body-app.component';
+import { HeaderAppComponent } from './header-app/header-app.component'
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -17,7 +21,9 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    LatNavBarComponent
+    LatNavBarComponent,
+    BodyAppComponent,
+    HeaderAppComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,9 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    GlobalVariableService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

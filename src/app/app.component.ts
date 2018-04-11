@@ -16,7 +16,6 @@ export class AppComponent {
     translate.setDefaultLang('es');
   };
   open(content) {
-    console.log(content)
     this.modalService.open(content).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
