@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./body-app.component.css']
 })
 export class BodyAppComponent implements OnInit {
-
+  public searchType : String;
   constructor() { }
 
   ngOnInit() {
   }
-  getAction(algo){
-    console.log(algo)
+  getAction(type){
+    this.searchType=type;
   }
 }

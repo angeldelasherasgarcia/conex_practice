@@ -7,5 +7,9 @@
         "decretos_resoluciones":"Decretos y resoluciones",
         "accesos":"Accesos",
         "administracion":"Administración"
+    },
+    "buscador":{
+        "criterios_busqueda":"Criterios de busqueda",
+        "convenios":"Convenios"
     }
 }

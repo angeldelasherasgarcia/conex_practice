@@ -12,7 +12,9 @@ import { LatNavBarComponent } from './lat-nav-bar/lat-nav-bar.component';
 //Services to use in this projects
 import {GlobalVariableService} from '../app/services/global-variable.service';
 import { BodyAppComponent } from './body-app/body-app.component';
-import { HeaderAppComponent } from './header-app/header-app.component'
+import { HeaderAppComponent } from './header-app/header-app.component';
+import { RegistroConveniosComponent } from './modules/registro-convenios/registro-convenios.component';
+import { SearchCriteriaAgreementsComponent } from './modules/registro-convenios/search-criteria-agreements/search-criteria-agreements.component'
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -23,7 +25,9 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     LatNavBarComponent,
     BodyAppComponent,
-    HeaderAppComponent
+    HeaderAppComponent,
+    RegistroConveniosComponent,
+    SearchCriteriaAgreementsComponent
   ],
   imports: [
     BrowserModule,
