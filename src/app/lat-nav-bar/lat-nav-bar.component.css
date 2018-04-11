@@ -1,0 +1,43 @@
+.lat-nav{
+    width: 18%;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    top:0;
+    color: white;
+    background: linear-gradient(50deg,#277EF4,#0A1F3B);
+}
+.user-zone{
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20%;
+}
+.link-zone{
+    margin-left: -8%;
+    margin-top: 20%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+hr {
+    height: 1px;
+    background-color: white;
+}
+ul {
+    list-style-type: none;
+}
+li{
+    margin-top: 5%;
+    margin-bottom: 5%; 
+}
+li:hover{
+    cursor: pointer;
+}
+.is_active{
+    font-size: 20px;
+    color:#ABCDFA;
+}
+.not_active{
+    font-size: 15px;
+    color:white;
+}

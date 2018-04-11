@@ -1,3 +1,11 @@
 {
-    "titulo": "CONEX"
+    "titulo": "CONEX",
+    "nav_bar":{
+        "filtro_instrumentos":"Filtro instrumentos",
+        "convenios":"Convenios",
+        "encomiendas":"Encomiendas",
+        "decretos_resoluciones":"Decretos y resoluciones",
+        "accesos":"Accesos",
+        "administracion":"Administración"
+    }
 }
