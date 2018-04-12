@@ -9,7 +9,12 @@
         "administracion":"Administración"
     },
     "buscador":{
-        "criterios_busqueda":"Criterios de busqueda",
-        "convenios":"Convenios"
+        "titulo_object":"Titulo/objeto",
+        "organo_responsable":"Órgano responsable",
+        "description_organo":"(*)Los convenios suscritos con anterioridad al 1 de enero de 2010 y también aquellos que hayan sido suscritos por los distritos , están asociados a la SGT a la que figure adscrita la Oficina del Secretario de la Junta de Gobierno",
+        "fecha_formalizacion":"Fecha de formalización",
+        "desde":"Desde:",
+        "hasta":"Hasta:",
+        "num_convenio":"Nº de convenio:"
     }
 }

@@ -1,4 +1,14 @@
 .search_criteria{
-    margin-top:-16px;
+    margin-top: 1%;
     background: white;
+}
+.since_until{
+    margin-top: 3%;
+}
+.num_convenio_disbled{
+    width: 30px;
+    text-align: center;
+}
+.num_convenio_abled{
+    width: 75px;
 }

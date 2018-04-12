@@ -1,5 +1,70 @@
 <div class="search_criteria">
-  <p>
-    search-criteria-agreements works!
-  </p>
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <form>
+        <div class="form-group row">
+          <label for="titulo" class="col-sm-3 col-form-label">{{'buscador.titulo_object' | translate}}</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="titulo">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="titulo" class="col-sm-3 col-form-label">{{'buscador.organo_responsable' | translate}}</label>
+          <div class="col-sm-6">
+            <select class="form-control" id="organo_responsable">
+              <option>Default select</option>
+            </select>
+          </div>
+        </div>
+        <label for="titulo" class="col-sm-9 offset-md-3 col-form-label">{{'buscador.description_organo' | translate}}</label>
+        <div class="form-group row since_until">
+          <label for="titulo" class="col-sm-3 col-form-label">{{'buscador.fecha_formalizacion' | translate}}</label>
+          <div class="form-group row col-sm-4">
+            <label class="col-sm-3 col-form-label">{{'buscador.desde' | translate}}</label>
+            <div class="col-sm-9">
+              <input type="date" class="form-control" name="desde" />
+            </div>
+          </div>
+          <div class="form-group row col-sm-4">
+            <label class="col-sm-3 col-form-label">{{'buscador.hasta' | translate}}</label>
+            <div class="col-sm-9">
+              <input type="date" class="form-control" name="hasta" />
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="titulo" class="col-sm-3 col-form-label">{{'buscador.num_convenio' | translate}}</label>
+          <div class="col-sm-9 row">
+            <input  type="text" 
+                    class="form-control num_convenio_abled" 
+                    id="titulo">
+            <input  type="text" 
+                    class="num_convenio_disbled" 
+                    id="titulo" 
+                    disabled="true" 
+                    placeholder="/">
+            <input  type="text" 
+                    class="form-control num_convenio_abled" 
+                    id="titulo">
+            <input  type="text" 
+                    class="num_convenio_disbled" 
+                    id="titulo" 
+                    disabled="true" 
+                    placeholder="/">
+            <input  type="text" 
+                    class="form-control num_convenio_abled" 
+                    id="titulo">
+            <input  type="text" 
+                    class="num_convenio_disbled" 
+                    id="titulo" 
+                    disabled="true" 
+                    placeholder="/">
+            <input  type="text" 
+                    class="form-control num_convenio_abled" 
+                    id="titulo">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
