@@ -5,28 +5,28 @@
   </div>
   <div class="link-zone">
       <ul>
-        <li [ngClass]="{'is_active': isActive ==='filtro' , 'not_active': isActive !=='filtro' }"
-            (click)="showModel('filtro')">
+        <li [ngClass]="{'is_active': isActive ==='filtro' , 'not_active': isActive !=='filtro' }">
             {{'nav_bar.filtro_instrumentos' | translate}}
         </li>
         <li [ngClass]="{'is_active': isActive ==='convenios' , 'not_active': isActive !=='convenios' }"
-            (click)="showModel('convenios')">
+            (click)="showModel('convenios')"
+            routerLink="/">
             {{'nav_bar.convenios' | translate}}
         </li>
         <li [ngClass]="{'is_active': isActive ==='encomiendas' , 'not_active': isActive !=='encomiendas' }"
-            (click)="showModel('encomiendas')">
+            (click)="showModel('encomiendas')"
+            routerLink="/encomiendas">
             {{'nav_bar.encomiendas' | translate}}
         </li>
         <li [ngClass]="{'is_active': isActive ==='resoluciones' , 'not_active': isActive !=='resoluciones' }"
-            (click)="showModel('resoluciones')">
+            (click)="showModel('resoluciones')"
+            routerLink="/decretos">
             {{'nav_bar.decretos_resoluciones' | translate}}
         </li>
-        <li [ngClass]="{'is_active': isActive ==='accesos' , 'not_active': isActive !=='accesos' }"
-            (click)="showModel('accesos')">
+        <li [ngClass]="{'is_active': isActive ==='accesos' , 'not_active': isActive !=='accesos' }">
             {{'nav_bar.accesos' | translate}}
         </li>
-        <li [ngClass]="{'is_active': isActive ==='administracion' , 'not_active': isActive !=='administracion' }"
-            (click)="showModel('administracion')">
+        <li [ngClass]="{'is_active': isActive ==='administracion' , 'not_active': isActive !=='administracion' }">
             {{'nav_bar.administracion' | translate}}
         </li>
       </ul>
