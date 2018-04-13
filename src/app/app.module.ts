@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { app_routing } from './routes';
 import { AppComponent } from './app.component';
-
+import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
 // import ngx-translate and the http loader
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -42,7 +42,9 @@ export function createTranslateLoader(http: HttpClient) {
       }
     }),
     NgbModule.forRoot(),
-    app_routing
+    app_routing,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     GlobalVariableService

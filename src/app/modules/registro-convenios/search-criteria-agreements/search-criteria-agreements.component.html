@@ -1,17 +1,25 @@
 <div class="search_criteria">
   <div class="row">
     <div class="col-md-10 offset-md-1">
-      <form>
+      <form [formGroup]="formpro" 
+            (ngSubmit)="searchCriteria()">
         <div class="form-group row">
           <label for="titulo" class="col-sm-3 col-form-label">{{'buscador.titulo_object' | translate}}</label>
           <div class="col-sm-3">
-            <input type="text" class="form-control" id="titulo">
+            <input  type="text" 
+                    class="form-control" 
+                    id="titulo"
+                    ngModel
+                    formControlName="titulo">
           </div>
         </div>
-        <div class="form-group row">
-          <label for="titulo" class="col-sm-3 col-form-label">{{'buscador.organo_responsable' | translate}}</label>
+        <div class="form-group row entidades">
+          <label for="organo_responsable" class="col-sm-3 col-form-label">{{'buscador.organo_responsable' | translate}}</label>
           <div class="col-sm-6">
-            <select class="form-control" id="organo_responsable">
+            <select class="form-control"
+                    id="organo_responsable"
+                    ngModel
+                    formControlName="organo_responsable">
               <option>Default select</option>
             </select>
           </div>
@@ -20,50 +28,170 @@
         <div class="form-group row since_until">
           <label for="titulo" class="col-sm-3 col-form-label">{{'buscador.fecha_formalizacion' | translate}}</label>
           <div class="form-group row col-sm-4">
+            <label for="desde_description_organo" class="col-sm-3 col-form-label">{{'buscador.desde' | translate}}</label>
+            <div class="col-sm-9">
+              <input  type="date" 
+                      class="form-control" 
+                      id="desde_description_organo"
+                      ngModel
+                      formControlName="desde_description_organo" />
+            </div>
+          </div>
+          <div class="form-group row col-sm-4">
+            <label for="hasta_description_organo" class="col-sm-3 col-form-label">{{'buscador.hasta' | translate}}</label>
+            <div class="col-sm-9">
+              <input  type="date" 
+                      class="form-control" 
+                      id="hasta_description_organo"
+                      ngModel
+                      formControlName="hasta_description_organo" />
+            </div>
+          </div>
+        </div>
+        <div class="form-group row two_imputs_file">
+          <label for="num_convenio" class="col-sm-3 col-form-label">{{'buscador.num_convenio' | translate}}</label>
+          <div class="col-sm-9 row">
+            <input  type="text" 
+                    class="form-control num_convenio_abled" 
+                    id="num_convenio_1"
+                    ngModel
+                    formControlName="num_convenio_1">
+            <input  type="text" 
+                    class="num_convenio_disbled" 
+                    disabled="true" 
+                    placeholder="/">
+            <input  type="text" 
+                    class="form-control num_convenio_abled" 
+                    id="num_convenio_2"
+                    ngModel
+                    formControlName="num_convenio_2">
+            <input  type="text" 
+                    class="num_convenio_disbled" 
+                    disabled="true" 
+                    placeholder="/">
+            <input  type="text" 
+                    class="form-control num_convenio_abled" 
+                    id="num_convenio_3"
+                    ngModel
+                    formControlName="num_convenio_3">
+            <input  type="text" 
+                    class="num_convenio_disbled" 
+                    disabled="true" 
+                    placeholder="/">
+            <input  type="text" 
+                    class="form-control num_convenio_abled" 
+                    id="num_convenio_4"
+                    ngModel
+                    formControlName="num_convenio_4">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="importe_gastos" class="col-sm-3 col-form-label">{{'buscador.importe_gastos' | translate}}</label>
+          <div class="form-group row col-sm-4">
             <label class="col-sm-3 col-form-label">{{'buscador.desde' | translate}}</label>
             <div class="col-sm-9">
-              <input type="date" class="form-control" name="desde" />
+              <input  type="text" 
+                      class="form-control"
+                      id="desde_importe_gastos"
+                      ngModel
+                      formControlName="desde_importe_gastos" />
             </div>
           </div>
           <div class="form-group row col-sm-4">
             <label class="col-sm-3 col-form-label">{{'buscador.hasta' | translate}}</label>
             <div class="col-sm-9">
-              <input type="date" class="form-control" name="hasta" />
+              <input  type="text" 
+                      class="form-control"
+                      id="hasta_importe_gastos" 
+                      ngModel
+                      formControlName="hasta_importe_gastos" />
             </div>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="titulo" class="col-sm-3 col-form-label">{{'buscador.num_convenio' | translate}}</label>
-          <div class="col-sm-9 row">
-            <input  type="text" 
-                    class="form-control num_convenio_abled" 
-                    id="titulo">
-            <input  type="text" 
-                    class="num_convenio_disbled" 
-                    id="titulo" 
-                    disabled="true" 
-                    placeholder="/">
-            <input  type="text" 
-                    class="form-control num_convenio_abled" 
-                    id="titulo">
-            <input  type="text" 
-                    class="num_convenio_disbled" 
-                    id="titulo" 
-                    disabled="true" 
-                    placeholder="/">
-            <input  type="text" 
-                    class="form-control num_convenio_abled" 
-                    id="titulo">
-            <input  type="text" 
-                    class="num_convenio_disbled" 
-                    id="titulo" 
-                    disabled="true" 
-                    placeholder="/">
-            <input  type="text" 
-                    class="form-control num_convenio_abled" 
-                    id="titulo">
+        <div class="form-group row two_imputs_file">
+          <label for="importe_ingresos" class="col-sm-3 col-form-label">{{'buscador.importe_ingresos' | translate}}</label>
+          <div class="form-group row col-sm-4">
+            <label class="col-sm-3 col-form-label">{{'buscador.desde' | translate}}</label>
+            <div class="col-sm-9">
+              <input  type="text" 
+                      class="form-control"
+                      id="desde_importe_ingresos"
+                      ngModel 
+                      formControlName="desde_importe_ingresos" />
+            </div>
+          </div>
+          <div class="form-group row col-sm-4">
+            <label class="col-sm-3 col-form-label">{{'buscador.hasta' | translate}}</label>
+            <div class="col-sm-9">
+              <input  type="text" 
+                      class="form-control"
+                      id="hasta_importe_ingresos"
+                      ngModel 
+                      formControlName="hasta_importe_ingresos" />
+            </div>
           </div>
         </div>
+        <div class="form-group row two_imputs_file">
+          <label for="organos_firmantes" class="col-sm-3 col-form-label">{{'buscador.organos_firmantes' | translate}}</label>
+          <div class="col-sm-8">
+            <input  type="text" 
+                    class="form-control" 
+                    id="organos_firmantes"
+                    ngModel
+                    formControlName="organos_firmantes">
+          </div>
+        </div>
+        <div class="form-group row entidades">
+          <div class="form-group row col-sm-6 ">
+            <label class="col-sm-5 col-form-label">{{'buscador.entidades_firmantes' | translate}}</label>
+            <div class="col-sm-7">
+              <input  type="text" 
+                      class="form-control"
+                      id="entidades_firmantes"
+                      ngModel 
+                      formControlName="entidades_firmantes" />
+            </div>
+          </div>
+          <div class="form-group row col-sm-6">
+            <label class="col-sm-5 col-form-label">{{'buscador.tipo_entidades' | translate}}</label>
+            <div class="col-sm-6">
+              <select class="form-control" 
+                      id="tipo_entidades"
+                      ngModel 
+                      formControlName="tipo_entidades" >
+                <option>Default select</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row two_imputs_file">
+          <div class="form-group row col-sm-6 ">
+            <label class="col-sm-5 col-form-label">{{'buscador.tipo_convenio' | translate}}</label>
+            <div class="col-sm-7">
+              <select class="form-control" 
+                      id="tipo_convenio"
+                      ngModel 
+                      formControlName="tipo_convenio">
+                <option>Default select</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row col-sm-6">
+            <label class="col-sm-5 col-form-label">{{'buscador.materia' | translate}}</label>
+            <div class="col-sm-6">
+              <select class="form-control" 
+                      id="materia"
+                      ngModel 
+                      formControlName="materia">
+                <option>Default select</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button type="submit" 
+                class="btn btn-default">
+                {{'buscador.buscar' | translate}}
+        </button>
       </form>
     </div>
   </div>
