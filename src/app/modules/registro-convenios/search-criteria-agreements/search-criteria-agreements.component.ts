@@ -13,7 +13,8 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
   public convenio: RegistroConvenios;
   public organoRespnsable: any = [];
   public tipoEntidad: any = [];
-  public tipoConvenio: any = []
+  public tipoConvenio: any = [];
+  public materia:any = [];
   public hiddenOrgano: boolean = false;
   //si es numerico iniciarlo como null
   constructor(private convenioForm: FormBuilder,
@@ -81,6 +82,7 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
         this.tipoConvenio = result.tipoConvenio
         this.tipoEntidad = result.tipoEntidad;
         this.organoRespnsable = result.responsibe;
+        this.materia = result.materia;
       },
       error =>{
         console.log(error)

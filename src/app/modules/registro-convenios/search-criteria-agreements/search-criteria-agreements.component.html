@@ -187,8 +187,10 @@
               <select class="form-control" 
                       id="materia"
                       name="materia"
-                      [(ngModel)]="convenio.materia">
-                <option>Default select</option>
+                      [(ngModel)]="convenio.materia"
+                      (change)="hiddenDefaultOption()">
+                <option [hidden]="hiddenOrgano">Selecione</option>
+                <option *ngFor="let materiaOption of materia">{{materiaOption.name}}</option>
               </select>
             </div>
           </div>
