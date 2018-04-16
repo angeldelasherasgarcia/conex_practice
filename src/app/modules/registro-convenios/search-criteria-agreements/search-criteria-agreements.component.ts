@@ -12,6 +12,8 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
   formpro: FormGroup;
   public convenio: RegistroConvenios;
   public organoRespnsable: any = [];
+  public tipoEntidad: any = [];
+  public tipoConvenio: any = []
   public hiddenOrgano: boolean = false;
   //si es numerico iniciarlo como null
   constructor(private convenioForm: FormBuilder,
@@ -20,38 +22,11 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.conveniosService.getResponsibleOrgan().subscribe(
-      result => {
-        this.organoRespnsable = result;
-        console.log(this.organoRespnsable)
-      },
-      error => {
-        console.log(error)
-      }
-    );
-    this.convenio = {
-      titulo: '',
-      organo_responsable: '',
-      desde_description_organo: '',
-      hasta_description_organo: '',
-      num_convenio_1: '',
-      num_convenio_2: '',
-      num_convenio_3: '',
-      num_convenio_4: '',
-      desde_importe_gastos: '',
-      hasta_importe_gastos: '',
-      desde_importe_ingresos: '',
-      hasta_importe_ingresos: '',
-      organos_firmantes: '',
-      entidades_firmantes: '',
-      tipo_entidades: '',
-      tipo_convenio: '',
-      materia: ''
-    };
+    this.initObject();
+    this.callServices();
   }
 
   searchCriteria() {
-    console.log(this)
     this.router.navigate(['decretos'])
   }
   saveConvenio(): any {
@@ -76,7 +51,40 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
     }
     return saveConvenio;
   }
-  hiddenDefaultOption(hiddenOption){
+  hiddenDefaultOption(){
     this.hiddenOrgano = true;
+  }
+  initObject(){
+    this.convenio = {
+      titulo: '',
+      organo_responsable: '',
+      desde_description_organo: '',
+      hasta_description_organo: '',
+      num_convenio_1: '',
+      num_convenio_2: '',
+      num_convenio_3: '',
+      num_convenio_4: '',
+      desde_importe_gastos: '',
+      hasta_importe_gastos: '',
+      desde_importe_ingresos: '',
+      hasta_importe_ingresos: '',
+      organos_firmantes: '',
+      entidades_firmantes: '',
+      tipo_entidades: '',
+      tipo_convenio: '',
+      materia: ''
+    };
+  }
+  callServices(){
+    this.conveniosService.getCargaSelect().subscribe(
+      result =>{
+        this.tipoConvenio = result.tipoConvenio
+        this.tipoEntidad = result.tipoEntidad;
+        this.organoRespnsable = result.responsibe;
+      },
+      error =>{
+        console.log(error)
+      }
+    )
   }
 }

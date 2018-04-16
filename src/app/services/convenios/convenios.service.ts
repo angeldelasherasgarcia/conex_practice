@@ -1,17 +1,14 @@
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {} from './../'
+import { } from './../'
+import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ConveniosService {
-  
+
   constructor(public http: HttpClient) { }
-  
-  public getResponsibleOrgan(){
-    const apiUrl = 'http://localhost:3000/responsibe-organ';
-    return this.http.get(apiUrl)
-  }
-  public getTipoEntidad(){
-    const apiUrl = 'http://localhost:3000/tipo-entidad';
+  public getCargaSelect(): Observable<any> {
+    //const apiUrl = 'http://localhost:3000/responsibe-organ';
+    const apiUrl = './assets/data/carga-select.json';
     return this.http.get(apiUrl)
   }
 }

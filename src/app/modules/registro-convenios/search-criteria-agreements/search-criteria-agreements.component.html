@@ -19,7 +19,7 @@
                     id="organo_responsable"
                     name="organo_responsable"
                     [(ngModel)]="convenio.organo_responsable"
-                    (change)="hiddenDefaultOption(hiddenOrgano)">
+                    (change)="hiddenDefaultOption()">
               <option [hidden]="hiddenOrgano">Selecione una opción</option>
               <option *ngFor="let organo of organoRespnsable">{{organo.name}}{{organo.id}}</option>
             </select>
@@ -156,11 +156,13 @@
           <div class="form-group row col-sm-6">
             <label class="col-sm-5 col-form-label">{{'buscador.tipo_entidades' | translate}}</label>
             <div class="col-sm-6">
-              <select class="form-control" 
+              <select class="form-control selectpicker" 
                       id="tipo_entidades"
                       name="tipo_entidades"
-                      [(ngModel)]="convenio.tipo_entidades" >
-                <option>Default select</option>
+                      [(ngModel)]="convenio.tipo_entidades" 
+                      (change)="hiddenDefaultOption()">
+                <option [hidden]="hiddenOrgano">Selecione</option>
+                <option *ngFor="let tipo of tipoEntidad">{{tipo.name}}</option>
               </select>
             </div>
           </div>
@@ -169,11 +171,13 @@
           <div class="form-group row col-sm-6 ">
             <label class="col-sm-5 col-form-label">{{'buscador.tipo_convenio' | translate}}</label>
             <div class="col-sm-7">
-              <select class="form-control" 
+              <select class="form-control selectpicker" 
                       id="tipo_convenio"
                       name="tipo_convenio"
-                      [(ngModel)]="convenio.tipo_convenio">
-                <option>Default select</option>
+                      [(ngModel)]="convenio.tipo_convenio"
+                      (change)="hiddenDefaultOption()">
+                <option [hidden]="hiddenOrgano">Selecione</option>
+                <option *ngFor="let tipo of tipoConvenio">{{tipo.name}}</option>
               </select>
             </div>
           </div>
