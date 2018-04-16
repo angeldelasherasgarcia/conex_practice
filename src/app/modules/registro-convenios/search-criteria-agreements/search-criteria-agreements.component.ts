@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm, FormControl, FormGroup, FormBuilder } from '@angular/forms'
 import { RegistroConvenios } from './../../../models/convenios.model';
+import { Router } from '@angular/router';
+import { ConveniosService } from './../../../services/convenios/convenios.service';
 @Component({
   selector: 'app-search-criteria-agreements',
   templateUrl: './search-criteria-agreements.component.html',
@@ -8,13 +10,26 @@ import { RegistroConvenios } from './../../../models/convenios.model';
 })
 export class SearchCriteriaAgreementsComponent implements OnInit {
   formpro: FormGroup;
-  convenio: RegistroConvenios;
+  public convenio: RegistroConvenios;
+  public organoRespnsable: any = [];
+  public hiddenOrgano: boolean = false;
   //si es numerico iniciarlo como null
-  constructor(private convenioForm: FormBuilder) {
+  constructor(private convenioForm: FormBuilder,
+    public router: Router,
+    public conveniosService: ConveniosService) {
   }
 
   ngOnInit() {
-    this.formpro = this.convenioForm.group({
+    this.conveniosService.getResponsibleOrgan().subscribe(
+      result => {
+        this.organoRespnsable = result;
+        console.log(this.organoRespnsable)
+      },
+      error => {
+        console.log(error)
+      }
+    );
+    this.convenio = {
       titulo: '',
       organo_responsable: '',
       desde_description_organo: '',
@@ -32,11 +47,12 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
       tipo_entidades: '',
       tipo_convenio: '',
       materia: ''
-    });
+    };
   }
 
   searchCriteria() {
-    this.convenio = this.saveConvenio();
+    console.log(this)
+    this.router.navigate(['decretos'])
   }
   saveConvenio(): any {
     const saveConvenio = {
@@ -59,5 +75,8 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
       materia: this.formpro.get('materia').value
     }
     return saveConvenio;
+  }
+  hiddenDefaultOption(hiddenOption){
+    this.hiddenOrgano = true;
   }
 }

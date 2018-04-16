@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { app_routing } from './routes';
 import { AppComponent } from './app.component';
-import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import ngx-translate and the http loader
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LatNavBarComponent } from './components/lat-nav-bar/lat-nav-bar.component';
 //Services to use in this projects
 import { GlobalVariableService } from '../app/services/global-variable.service';
+import { ConveniosService } from '../app/services/convenios/convenios.service'
 import { HeaderAppComponent } from './components/header-app/header-app.component';
 import { RegistroConveniosComponent } from './modules/registro-convenios/registro-convenios.component';
 import { SearchCriteriaAgreementsComponent } from './modules/registro-convenios/search-criteria-agreements/search-criteria-agreements.component';
@@ -47,7 +48,8 @@ export function createTranslateLoader(http: HttpClient) {
     ReactiveFormsModule
   ],
   providers: [
-    GlobalVariableService
+    GlobalVariableService,
+    ConveniosService
   ],
   bootstrap: [AppComponent]
 })
