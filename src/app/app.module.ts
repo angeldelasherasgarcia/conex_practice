@@ -16,7 +16,8 @@ import { HeaderAppComponent } from './components/header-app/header-app.component
 import { RegistroConveniosComponent } from './modules/registro-convenios/registro-convenios.component';
 import { SearchCriteriaAgreementsComponent } from './modules/registro-convenios/search-criteria-agreements/search-criteria-agreements.component';
 import { EncomiendasComponent } from './modules/encomiendas/encomiendas.component';
-import { DecretosResolucionesComponent } from './modules/decretos-resoluciones/decretos-resoluciones.component'
+import { DecretosResolucionesComponent } from './modules/decretos-resoluciones/decretos-resoluciones.component';
+import { ModalComponent } from './components/modal/modal.component'
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -30,7 +31,8 @@ export function createTranslateLoader(http: HttpClient) {
     RegistroConveniosComponent,
     SearchCriteriaAgreementsComponent,
     EncomiendasComponent,
-    DecretosResolucionesComponent
+    DecretosResolucionesComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +53,8 @@ export function createTranslateLoader(http: HttpClient) {
     GlobalVariableService,
     ConveniosService
   ],
+  entryComponents: [
+    ModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

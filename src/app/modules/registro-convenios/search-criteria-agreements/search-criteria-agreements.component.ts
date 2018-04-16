@@ -2,7 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm, FormControl, FormGroup, FormBuilder } from '@angular/forms'
 import { RegistroConvenios } from './../../../models/convenios.model';
 import { Router } from '@angular/router';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { ConveniosService } from './../../../services/convenios/convenios.service';
+import { ModalComponent } from '../../../components/modal/modal.component';
 @Component({
   selector: 'app-search-criteria-agreements',
   templateUrl: './search-criteria-agreements.component.html',
@@ -19,7 +21,8 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
   //si es numerico iniciarlo como null
   constructor(private convenioForm: FormBuilder,
     public router: Router,
-    public conveniosService: ConveniosService) {
+    public conveniosService: ConveniosService,
+    private modalService: NgbModal) {
   }
 
   ngOnInit() {
@@ -86,6 +89,7 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
       },
       error =>{
         console.log(error)
+        this.modalService.open(ModalComponent)
       }
     )
   }
