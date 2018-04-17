@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit, Input } from '@angular/core';
+import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })
-export class ModalComponent{
+export class ModalComponent implements OnInit {
+  @Input() title_modal;
+  @Input() data;
+  closeResult: string;
+  constructor(private modalService: NgbModal,
+    public activeModal: NgbActiveModal) { }
   
-  closeResult: string;  
-  constructor(private modalService: NgbModal) { }
-
+  ngOnInit(): void {
+    console.log(this.data)
+  }
   open(content) {
     this.modalService.open(content).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
@@ -24,7 +29,7 @@ export class ModalComponent{
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
       return 'by clicking on a backdrop';
     } else {
-      return  `with: ${reason}`;
+      return `with: ${reason}`;
     }
   }
 

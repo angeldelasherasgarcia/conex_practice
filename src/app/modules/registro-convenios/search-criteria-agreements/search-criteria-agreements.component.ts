@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm, FormControl, FormGroup, FormBuilder } from '@angular/forms'
 import { RegistroConvenios } from './../../../models/convenios.model';
 import { Router } from '@angular/router';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ConveniosService } from './../../../services/convenios/convenios.service';
 import { ModalComponent } from '../../../components/modal/modal.component';
 @Component({
@@ -16,8 +16,9 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
   public organoRespnsable: any = [];
   public tipoEntidad: any = [];
   public tipoConvenio: any = [];
-  public materia:any = [];
+  public materia: any = [];
   public hiddenOrgano: boolean = false;
+  private modal: any;
   //si es numerico iniciarlo como null
   constructor(private convenioForm: FormBuilder,
     public router: Router,
@@ -55,10 +56,10 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
     }
     return saveConvenio;
   }
-  hiddenDefaultOption(){
+  hiddenDefaultOption() {
     this.hiddenOrgano = true;
   }
-  initObject(){
+  initObject() {
     this.convenio = {
       titulo: '',
       organo_responsable: '',
@@ -79,17 +80,20 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
       materia: ''
     };
   }
-  callServices(){
+  callServices() {
     this.conveniosService.getCargaSelect().subscribe(
-      result =>{
+      result => {
         this.tipoConvenio = result.tipoConvenio
         this.tipoEntidad = result.tipoEntidad;
         this.organoRespnsable = result.responsibe;
         this.materia = result.materia;
       },
-      error =>{
-        console.log(error)
-        this.modalService.open(ModalComponent)
+      error => {
+        this.modal = this.modalService.open(ModalComponent);
+        this.modal.componentInstance.data = "Oops..... 404 error";
+        this.modal.componentInstance.title_modal="Error"
+        this.modal.result.then((result) => {
+        })
       }
     )
   }
