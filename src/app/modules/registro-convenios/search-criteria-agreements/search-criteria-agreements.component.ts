@@ -32,29 +32,8 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
   }
 
   searchCriteria() {
-    this.router.navigate(['decretos'])
-  }
-  saveConvenio(): any {
-    const saveConvenio = {
-      titulo: this.formpro.get('titulo').value,
-      organo_responsable: this.formpro.get('organo_responsable').value,
-      desde_description_organo: this.formpro.get('desde_description_organo').value,
-      hasta_description_organo: this.formpro.get('hasta_description_organo').value,
-      num_convenio_1: this.formpro.get('num_convenio_1').value,
-      num_convenio_2: this.formpro.get('num_convenio_2').value,
-      num_convenio_3: this.formpro.get('num_convenio_3').value,
-      num_convenio_4: this.formpro.get('num_convenio_4').value,
-      desde_importe_gastos: this.formpro.get('desde_importe_gastos').value,
-      hasta_importe_gastos: this.formpro.get('hasta_importe_gastos').value,
-      desde_importe_ingresos: this.formpro.get('desde_importe_ingresos').value,
-      hasta_importe_ingresos: this.formpro.get('hasta_importe_ingresos').value,
-      organos_firmantes: this.formpro.get('organos_firmantes').value,
-      entidades_firmantes: this.formpro.get('entidades_firmantes').value,
-      tipo_entidades: this.formpro.get('tipo_entidades').value,
-      tipo_convenio: this.formpro.get('tipo_convenio').value,
-      materia: this.formpro.get('materia').value
-    }
-    return saveConvenio;
+    this.conveniosService.searchConvenio(this.convenio);
+    this.router.navigate(['lista_convenios']);
   }
   hiddenDefaultOption() {
     this.hiddenOrgano = true;

@@ -17,7 +17,8 @@ import { RegistroConveniosComponent } from './modules/registro-convenios/registr
 import { SearchCriteriaAgreementsComponent } from './modules/registro-convenios/search-criteria-agreements/search-criteria-agreements.component';
 import { EncomiendasComponent } from './modules/encomiendas/encomiendas.component';
 import { DecretosResolucionesComponent } from './modules/decretos-resoluciones/decretos-resoluciones.component';
-import { ModalComponent } from './components/modal/modal.component'
+import { ModalComponent } from './components/modal/modal.component';
+import { ListaRegistroConveniosComponent } from './modules/registro-convenios/lista-registro-convenios/lista-registro-convenios.component'
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -32,7 +33,8 @@ export function createTranslateLoader(http: HttpClient) {
     SearchCriteriaAgreementsComponent,
     EncomiendasComponent,
     DecretosResolucionesComponent,
-    ModalComponent
+    ModalComponent,
+    ListaRegistroConveniosComponent
   ],
   imports: [
     BrowserModule,
