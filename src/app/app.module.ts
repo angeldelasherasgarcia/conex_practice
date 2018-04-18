@@ -16,12 +16,12 @@ import { ConveniosService } from '../app/services/convenios/convenios.service';
 import { ListaRegistroConveniosService } from '../app/services/convenios/lista-registro-convenios.service';
 //Components
 import { HeaderAppComponent } from './layouts/header/header.component';
-import { RegistroConveniosComponent } from './modules/registro-convenios/registro-convenios.component';
-import { SearchCriteriaAgreementsComponent } from './modules/registro-convenios/search-criteria-agreements/search-criteria-agreements.component';
+import { AgreementsComponent } from './modules/agreements/agreements.component';
+import { SearchCriteriaAgreementsComponent } from './modules/agreements/search-criteria-agreements/search-criteria-agreements.component';
 import { EncomiendasComponent } from './modules/encomiendas/encomiendas.component';
 import { DecretosResolucionesComponent } from './modules/decretos-resoluciones/decretos-resoluciones.component';
-import { ListaRegistroConveniosComponent } from './modules/registro-convenios/lista-registro-convenios/lista-registro-convenios.component'
-import { DetalleConvenioComponent } from './modules/registro-convenios/detalle-convenio/detalle-convenio.component';
+import { ListAgreementsComponent } from './modules/agreements/list-agreements/list-agreements.component'
+import { DetalleConvenioComponent } from './modules/agreements/detalle-convenio/detalle-convenio.component';
 import { ErrorComponent } from './layouts/error/error.component';
 
 export function createTranslateLoader(http: HttpClient) {
@@ -33,12 +33,12 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     LatNavBarComponent,
     HeaderAppComponent,
-    RegistroConveniosComponent,
+    AgreementsComponent,
     SearchCriteriaAgreementsComponent,
     EncomiendasComponent,
     DecretosResolucionesComponent,
     ErrorComponent,
-    ListaRegistroConveniosComponent,
+    ListAgreementsComponent,
     DetalleConvenioComponent
   ],
   imports: [

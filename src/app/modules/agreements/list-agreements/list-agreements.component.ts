@@ -6,10 +6,10 @@ import { ErrorComponent } from '../../../layouts/error/error.component';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-lista-registro-convenios',
-  templateUrl: './lista-registro-convenios.component.html',
-  styleUrls: ['./lista-registro-convenios.component.css']
+  templateUrl: './list-agreements.component.html',
+  styleUrls: ['./list-agreements.component.css']
 })
-export class ListaRegistroConveniosComponent implements OnInit {
+export class ListAgreementsComponent implements OnInit {
   public lista_registros: any = [];
   private modal: any;
   constructor(public conveniosService: ConveniosService,

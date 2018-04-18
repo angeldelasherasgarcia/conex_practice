@@ -33,7 +33,7 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
 
   searchCriteria() {
     this.conveniosService.searchConvenio(this.convenio);
-    this.router.navigate(['lista_convenios']);
+    this.router.navigate(['list_agreements']);
   }
   hiddenDefaultOption() {
     this.hiddenOrgano = true;

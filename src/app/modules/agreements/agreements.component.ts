@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-registro-convenios',
-  templateUrl: './registro-convenios.component.html',
-  styleUrls: ['./registro-convenios.component.css']
+  templateUrl: './agreements.component.html',
+  styleUrls: ['./agreements.component.css']
 })
-export class RegistroConveniosComponent implements OnInit {
+export class AgreementsComponent implements OnInit {
   public searchCriteriaButton : boolean;
   public criteriaButton : boolean;
   constructor() { }

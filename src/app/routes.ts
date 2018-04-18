@@ -1,16 +1,16 @@
 import { Routes, RouterModule } from '@angular/router';
-import { RegistroConveniosComponent,
+import { AgreementsComponent,
          EncomiendasComponent,
          DecretosResolucionesComponent,
-         ListaRegistroConveniosComponent,
+         ListAgreementsComponent,
          DetalleConvenioComponent
         } from "./project.pages";
 const routes: Routes = [
-    { path: '', component: RegistroConveniosComponent },
+    { path: '', component: AgreementsComponent },
     { path: 'encomiendas', component: EncomiendasComponent },
     { path: 'decretos', component: DecretosResolucionesComponent },
-    { path: 'lista_convenios', component: ListaRegistroConveniosComponent },
+    { path: 'list_agreements', component: ListAgreementsComponent },
     { path: 'detalle-convenio', component: DetalleConvenioComponent},
-    { path: '**', component: RegistroConveniosComponent }
+    { path: '**', component: AgreementsComponent }
 ];
 export const app_routing = RouterModule.forRoot(routes, {useHash:true})
