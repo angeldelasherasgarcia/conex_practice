@@ -13,14 +13,14 @@
             routerLink="/">
             {{'nav_bar.convenios' | translate}}
         </li>
-        <li [ngClass]="{'is_active': isActive ==='encomiendas' , 'not_active': isActive !=='encomiendas' }"
-            (click)="showModel('encomiendas')"
-            routerLink="/encomiendas">
+        <li [ngClass]="{'is_active': isActive ==='parcels' , 'not_active': isActive !=='parcels' }"
+            (click)="showModel('parcels')"
+            routerLink="/parcels">
             {{'nav_bar.encomiendas' | translate}}
         </li>
-        <li [ngClass]="{'is_active': isActive ==='resoluciones' , 'not_active': isActive !=='resoluciones' }"
-            (click)="showModel('resoluciones')"
-            routerLink="/decretos">
+        <li [ngClass]="{'is_active': isActive ==='decrees' , 'not_active': isActive !=='decrees' }"
+            (click)="showModel('decrees')"
+            routerLink="/decrees">
             {{'nav_bar.decretos_resoluciones' | translate}}
         </li>
         <li [ngClass]="{'is_active': isActive ==='accesos' , 'not_active': isActive !=='accesos' }">

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { app_routing } from './routes';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ParcelsModule} from './modules/parcels/parcels.module';
+import { DecreesResolutionsModule } from './modules/decrees-resolutions/decrees-resolutions.module'
 // import ngx-translate and the http loader
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -18,8 +20,6 @@ import { ListaRegistroConveniosService } from '../app/services/convenios/lista-r
 import { HeaderAppComponent } from './layouts/header/header.component';
 import { AgreementsComponent } from './modules/agreements/agreements.component';
 import { SearchCriteriaAgreementsComponent } from './modules/agreements/search-criteria-agreements/search-criteria-agreements.component';
-import { EncomiendasComponent } from './modules/encomiendas/encomiendas.component';
-import { DecretosResolucionesComponent } from './modules/decretos-resoluciones/decretos-resoluciones.component';
 import { ListAgreementsComponent } from './modules/agreements/list-agreements/list-agreements.component'
 import { DetailAgreementComponent } from './modules/agreements/detail-agreement/detail-agreement.component';
 import { ErrorComponent } from './layouts/error/error.component';
@@ -35,14 +35,14 @@ export function createTranslateLoader(http: HttpClient) {
     HeaderAppComponent,
     AgreementsComponent,
     SearchCriteriaAgreementsComponent,
-    EncomiendasComponent,
-    DecretosResolucionesComponent,
     ErrorComponent,
     ListAgreementsComponent,
     DetailAgreementComponent
   ],
   imports: [
     BrowserModule,
+    ParcelsModule,
+    DecreesResolutionsModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
