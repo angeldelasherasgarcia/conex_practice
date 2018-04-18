@@ -4,7 +4,7 @@ import { RegistroConvenios } from './../../../models/convenios.model';
 import { Router } from '@angular/router';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ConveniosService } from './../../../services/convenios/convenios.service';
-import { ModalComponent } from '../../../components/modal/modal.component';
+import { ErrorComponent } from '../../../layouts/error/error.component';
 @Component({
   selector: 'app-search-criteria-agreements',
   templateUrl: './search-criteria-agreements.component.html',
@@ -68,7 +68,7 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
         this.materia = result.materia;
       },
       error => {
-        this.modal = this.modalService.open(ModalComponent);
+        this.modal = this.modalService.open(ErrorComponent);
         this.modal.componentInstance.data = "Oops..... 404 error";
         this.modal.componentInstance.title_modal="Error"
         this.modal.result.then((result) => {

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ConveniosService } from './../../../services/convenios/convenios.service';
 import { ListaRegistroConveniosService } from './../../../services/convenios/lista-registro-convenios.service'
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { ModalComponent } from '../../../components/modal/modal.component';
+import { ErrorComponent } from '../../../layouts/error/error.component';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-lista-registro-convenios',
@@ -27,7 +27,7 @@ export class ListaRegistroConveniosComponent implements OnInit {
           this.lista_registros = result.registro_convenios;
         },
         error => {
-          this.modal = this.modalService.open(ModalComponent);
+          this.modal = this.modalService.open(ErrorComponent);
           this.modal.componentInstance.data = "Oops..... 404 error";
           this.modal.componentInstance.title_modal = "Error"
           this.modal.result.then((result) => {
@@ -39,7 +39,7 @@ export class ListaRegistroConveniosComponent implements OnInit {
           this.lista_registros = result.registro_convenios;
         },
         error => {
-          this.modal = this.modalService.open(ModalComponent);
+          this.modal = this.modalService.open(ErrorComponent);
           this.modal.componentInstance.data = "Oops..... 404 error";
           this.modal.componentInstance.title_modal = "Error"
           this.modal.result.then((result) => {

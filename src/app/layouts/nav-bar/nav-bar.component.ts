@@ -2,8 +2,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-lat-nav-bar',
-  templateUrl: './lat-nav-bar.component.html',
-  styleUrls: ['./lat-nav-bar.component.css']
+  templateUrl: './nav-bar.component.html',
+  styleUrls: ['./nav-bar.component.css']
 })
 export class LatNavBarComponent implements OnInit {
   public nombreUsuario : String;

@@ -2,10 +2,10 @@ import { Component, OnInit, Input } from '@angular/core';
 import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css']
+  templateUrl: './error.component.html',
+  styleUrls: ['./error.component.css']
 })
-export class ModalComponent implements OnInit {
+export class ErrorComponent implements OnInit {
   @Input() title_modal;
   @Input() data;
   closeResult: string;

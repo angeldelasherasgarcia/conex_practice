@@ -9,20 +9,20 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule} from 'ngx-pagination';
-import { LatNavBarComponent } from './components/lat-nav-bar/lat-nav-bar.component';
+import { LatNavBarComponent } from './layouts/nav-bar/nav-bar.component';
 //Services to use in this projects
 import { GlobalVariableService } from '../app/services/global-variable.service';
 import { ConveniosService } from '../app/services/convenios/convenios.service';
 import { ListaRegistroConveniosService } from '../app/services/convenios/lista-registro-convenios.service';
 //Components
-import { HeaderAppComponent } from './components/header-app/header-app.component';
+import { HeaderAppComponent } from './layouts/header/header.component';
 import { RegistroConveniosComponent } from './modules/registro-convenios/registro-convenios.component';
 import { SearchCriteriaAgreementsComponent } from './modules/registro-convenios/search-criteria-agreements/search-criteria-agreements.component';
 import { EncomiendasComponent } from './modules/encomiendas/encomiendas.component';
 import { DecretosResolucionesComponent } from './modules/decretos-resoluciones/decretos-resoluciones.component';
-import { ModalComponent } from './components/modal/modal.component';
 import { ListaRegistroConveniosComponent } from './modules/registro-convenios/lista-registro-convenios/lista-registro-convenios.component'
 import { DetalleConvenioComponent } from './modules/registro-convenios/detalle-convenio/detalle-convenio.component';
+import { ErrorComponent } from './layouts/error/error.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,7 +37,7 @@ export function createTranslateLoader(http: HttpClient) {
     SearchCriteriaAgreementsComponent,
     EncomiendasComponent,
     DecretosResolucionesComponent,
-    ModalComponent,
+    ErrorComponent,
     ListaRegistroConveniosComponent,
     DetalleConvenioComponent
   ],
@@ -63,7 +63,7 @@ export function createTranslateLoader(http: HttpClient) {
     ListaRegistroConveniosService
   ],
   entryComponents: [
-    ModalComponent],
+    ErrorComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
