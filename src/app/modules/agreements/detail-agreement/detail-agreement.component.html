@@ -1,3 +1,19 @@
-<p>
-  detalle-convenio works!
-</p>
+<div>
+  <ul>
+    <li [ngClass]="{'isSelected': isSelected ==='convenios'}"
+        (click)="showDetails('convenios')">
+        Convenio + nombre
+    </li>
+    <li [ngClass]="{'isSelected': isSelected ==='archivos'}"
+        (click)="showDetails('archivos')">
+        Archivos
+    </li>
+    <li [ngClass]="{'isSelected': isSelected ==='relacionados'}"
+        (click)="showDetails('relacionados')">
+        Relacionados
+    </li>
+  </ul>
+</div>
+<app-show-detail *ngIf="isSelected ==='convenios'"></app-show-detail>
+<app-related *ngIf="isSelected ==='archivos'"></app-related>
+<app-folders *ngIf="isSelected ==='relacionados'"></app-folders>

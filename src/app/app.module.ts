@@ -23,6 +23,9 @@ import { SearchCriteriaAgreementsComponent } from './modules/agreements/search-c
 import { ListAgreementsComponent } from './modules/agreements/list-agreements/list-agreements.component'
 import { DetailAgreementComponent } from './modules/agreements/detail-agreement/detail-agreement.component';
 import { ErrorComponent } from './layouts/error/error.component';
+import { ShowDetailComponent } from './modules/agreements/detail-agreement/show-detail/show-detail.component';
+import { FoldersComponent } from './modules/agreements/detail-agreement/folders/folders.component';
+import { RelatedComponent } from './modules/agreements/detail-agreement/related/related.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,7 +40,10 @@ export function createTranslateLoader(http: HttpClient) {
     SearchCriteriaAgreementsComponent,
     ErrorComponent,
     ListAgreementsComponent,
-    DetailAgreementComponent
+    DetailAgreementComponent,
+    ShowDetailComponent,
+    FoldersComponent,
+    RelatedComponent
   ],
   imports: [
     BrowserModule,
