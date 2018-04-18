@@ -1,12 +1,13 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import {CARGA_SELECT} from './../../app.constants';
 @Injectable()
 export class ConveniosService {
   public body_search_convenio: any;
   constructor(public http: HttpClient) { }
   public getCargaSelect(): Observable<any> {
-    const apiUrl = './assets/data/carga-select.json';
+    const apiUrl = CARGA_SELECT;
     return this.http.get(apiUrl)
   }
   /**

@@ -3,6 +3,7 @@ import { ConveniosService } from './../../../services/convenios/convenios.servic
 import { ListaRegistroConveniosService } from './../../../services/convenios/lista-registro-convenios.service'
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from '../../../components/modal/modal.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-lista-registro-convenios',
   templateUrl: './lista-registro-convenios.component.html',
@@ -12,8 +13,9 @@ export class ListaRegistroConveniosComponent implements OnInit {
   public lista_registros: any = [];
   private modal: any;
   constructor(public conveniosService: ConveniosService,
-    public listaConv: ListaRegistroConveniosService,
-    private modalService: NgbModal) { }
+              public listaConv: ListaRegistroConveniosService,
+              private modalService: NgbModal,
+              public router: Router) { }
 
   ngOnInit() {
     this.callService();
@@ -47,5 +49,6 @@ export class ListaRegistroConveniosComponent implements OnInit {
   }
   public showDetails(object){
     console.log(object);
+    this.router.navigate(['detalle-convenio']);
   }
 }

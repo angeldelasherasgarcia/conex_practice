@@ -1,0 +1,1 @@
+export const CARGA_SELECT = './assets/data/carga-select.json';
