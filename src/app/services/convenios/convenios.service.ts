@@ -1,6 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { } from './../'
 import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ConveniosService {

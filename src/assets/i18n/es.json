@@ -24,5 +24,12 @@
         "tipo_convenio":"Tipo Convenio:",
         "materia":"Materia:",
         "buscar":"Buscar"
+    },
+    "lista_registro":{
+        "num_convenio":"Nº Convenio:",
+        "formalizacion":"Formalización:",
+        "tipo":"Tipo:",
+        "titulo":"Titulo:",
+        "vigencia":"Vigencia:"
     }
 }

@@ -8,10 +8,13 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxPaginationModule} from 'ngx-pagination';
 import { LatNavBarComponent } from './components/lat-nav-bar/lat-nav-bar.component';
 //Services to use in this projects
 import { GlobalVariableService } from '../app/services/global-variable.service';
-import { ConveniosService } from '../app/services/convenios/convenios.service'
+import { ConveniosService } from '../app/services/convenios/convenios.service';
+import { ListaRegistroConveniosService } from '../app/services/convenios/lista-registro-convenios.service';
+//Components
 import { HeaderAppComponent } from './components/header-app/header-app.component';
 import { RegistroConveniosComponent } from './modules/registro-convenios/registro-convenios.component';
 import { SearchCriteriaAgreementsComponent } from './modules/registro-convenios/search-criteria-agreements/search-criteria-agreements.component';
@@ -49,11 +52,13 @@ export function createTranslateLoader(http: HttpClient) {
     NgbModule.forRoot(),
     app_routing,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [
     GlobalVariableService,
-    ConveniosService
+    ConveniosService,
+    ListaRegistroConveniosService
   ],
   entryComponents: [
     ModalComponent],
