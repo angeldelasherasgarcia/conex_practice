@@ -49,6 +49,6 @@ export class ListAgreementsComponent implements OnInit {
   }
   public showDetails(object){
     console.log(object);
-    this.router.navigate(['detalle-convenio']);
+    this.router.navigate(['detail-agreement']);
   }
 }

@@ -21,7 +21,7 @@ import { SearchCriteriaAgreementsComponent } from './modules/agreements/search-c
 import { EncomiendasComponent } from './modules/encomiendas/encomiendas.component';
 import { DecretosResolucionesComponent } from './modules/decretos-resoluciones/decretos-resoluciones.component';
 import { ListAgreementsComponent } from './modules/agreements/list-agreements/list-agreements.component'
-import { DetalleConvenioComponent } from './modules/agreements/detalle-convenio/detalle-convenio.component';
+import { DetailAgreementComponent } from './modules/agreements/detail-agreement/detail-agreement.component';
 import { ErrorComponent } from './layouts/error/error.component';
 
 export function createTranslateLoader(http: HttpClient) {
@@ -39,7 +39,7 @@ export function createTranslateLoader(http: HttpClient) {
     DecretosResolucionesComponent,
     ErrorComponent,
     ListAgreementsComponent,
-    DetalleConvenioComponent
+    DetailAgreementComponent
   ],
   imports: [
     BrowserModule,
