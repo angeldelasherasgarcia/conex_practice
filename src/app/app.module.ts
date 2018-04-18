@@ -22,6 +22,7 @@ import { EncomiendasComponent } from './modules/encomiendas/encomiendas.componen
 import { DecretosResolucionesComponent } from './modules/decretos-resoluciones/decretos-resoluciones.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { ListaRegistroConveniosComponent } from './modules/registro-convenios/lista-registro-convenios/lista-registro-convenios.component'
+import { DetalleConvenioComponent } from './modules/registro-convenios/detalle-convenio/detalle-convenio.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,7 +38,8 @@ export function createTranslateLoader(http: HttpClient) {
     EncomiendasComponent,
     DecretosResolucionesComponent,
     ModalComponent,
-    ListaRegistroConveniosComponent
+    ListaRegistroConveniosComponent,
+    DetalleConvenioComponent
   ],
   imports: [
     BrowserModule,
