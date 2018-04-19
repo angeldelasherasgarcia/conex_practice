@@ -1,10 +1,14 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import {CARGA_SELECT} from './../../app.constants';
+import {
+        CARGA_SELECT,
+        DETAIL_AGREEMENT
+      } from './../../app.constants';
 @Injectable()
 export class ConveniosService {
   public body_search_convenio: any;
+  public agreement_selected:any[];
   constructor(public http: HttpClient) { }
   public getCargaSelect(): Observable<any> {
     const apiUrl = CARGA_SELECT;
@@ -41,5 +45,9 @@ export class ConveniosService {
    * @description: Metodo para No enviar ningun valor sino recibimos nada del formulario
    */
   public isEmpty() {
+  }
+  public getDetailAgreement(object):any{
+    const apiUrl = DETAIL_AGREEMENT;
+    return this.http.get(apiUrl,object)
   }
 }

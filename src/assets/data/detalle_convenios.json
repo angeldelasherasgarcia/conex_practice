@@ -1,0 +1,32 @@
+{
+  "_id": "5ad87427eda9b4a61d437695",
+  "index": 0,
+  "detalle_convenios": {
+    "fecha_formalizacion": "2015-04-25T02:17:35 -02:00",
+    "num_expediente": 0,
+    "titulo": "Lesley Burgess",
+    "num_convenio": 35,
+    "organos_firmantes": {
+      "firmantes": "Colette Burks",
+      "obligatorios": "Rosa Wilcox"
+    },
+    "entidades_firmantes": {
+      "entidad": "Katherine Castaneda",
+      "firmates": "Connie Bates",
+      "obligados": "Inez Nolan"
+    },
+    "tipo_convenio": "May Allen",
+    "materia": "Fry Ashley",
+    "anexos": "Susanna Roman",
+    "vigencia": {
+      "desde": "Castro Fitzgerald",
+      "hasta": "Aguilar Byers"
+    },
+    "importe": {
+      "ingresos": -30.09123,
+      "gastos": -40.215174
+    },
+    "prorroga": 31,
+    "duracion": "Candy Weiss"
+  }
+}

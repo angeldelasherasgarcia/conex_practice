@@ -48,7 +48,7 @@ export class ListAgreementsComponent implements OnInit {
     };
   }
   public showDetails(object){
-    console.log(object);
+    this.conveniosService.agreement_selected=object;
     this.router.navigate(['detail-agreement']);
   }
 }

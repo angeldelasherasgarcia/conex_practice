@@ -5,12 +5,12 @@
     background-color: white;
 }
 .border-box{
-    border: 2px solid #F8F4F4;
+    border: 2px solid #F1EAEA;
     border-radius: 5px;
     
 }
 .title-box{
-    background-color: #F8F4F4;
+    background-color: #F1EAEA;
     height:25px;
     color: black;
     text-align: left;
@@ -25,12 +25,12 @@
     margin-left: 16%;
     margin-right: 16%;
     margin-bottom: 1%;
-    border: 2px solid #F8F4F4;
+    border: 2px solid #FAF6F6;
     border-radius: 5px;
     text-align: center;
 }
 input:disabled {
-    background: #FAFAFA;
+    background: #FAF6F6;
 }
 
 .big_box_header{
@@ -42,13 +42,12 @@ input:disabled {
     margin-left: 8%;
     margin-right: 8%;
     margin-bottom: 1%;
-    border: 2px solid #F8F4F4;
+    border: 2px solid #FAF6F6;
     border-radius: 5px;
     text-align: center;
 }
 .margin_input{
-    height: 25px;
-    width: 75%;
+    width: 85%;
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -62,10 +61,20 @@ input:disabled {
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border: 1px solid #FAFAFA;
+    border: 1px solid #FAF6F6;
     border-radius: .25rem;
 }
 .margin_form{
     margin-top: -1%;
     margin-left: 8%;
+}
+.custom-select:disabled {
+    background-color: #FAF6F6;
+    border: 1px solid #FAF6F6;
+}
+.margin_select{
+    height: 25px;
+    width: 75%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
