@@ -1,0 +1,71 @@
+.header_div{
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: white;
+}
+.border-box{
+    border: 2px solid #F8F4F4;
+    border-radius: 5px;
+    
+}
+.title-box{
+    background-color: #F8F4F4;
+    height:25px;
+    color: black;
+    text-align: left;
+}
+.box_header{
+    margin-top: 1%;
+    margin-left: 16%;
+    margin-right: 16%;
+    text-align: center;
+}
+.body_box{
+    margin-left: 16%;
+    margin-right: 16%;
+    margin-bottom: 1%;
+    border: 2px solid #F8F4F4;
+    border-radius: 5px;
+    text-align: center;
+}
+input:disabled {
+    background: #FAFAFA;
+}
+
+.big_box_header{
+    margin-left: 8%;
+    margin-right: 8%;
+    text-align: center;
+}
+.body_big_box{
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 1%;
+    border: 2px solid #F8F4F4;
+    border-radius: 5px;
+    text-align: center;
+}
+.margin_input{
+    height: 25px;
+    width: 75%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.margin_input_3col{
+    height: 25px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.new_form_control{
+    height: 25px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid #FAFAFA;
+    border-radius: .25rem;
+}
+.margin_form{
+    margin-top: -1%;
+    margin-left: 8%;
+}

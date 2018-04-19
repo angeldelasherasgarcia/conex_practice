@@ -31,5 +31,27 @@
         "tipo":"Tipo:",
         "titulo":"Titulo:",
         "vigencia":"Vigencia:"
+    },
+    "show-details-agreements":{
+        "datos_convenio":"Datos del Convenio",
+        "fecha_formalizacion":"Fecha de formalización:",
+        "num_expediente":"Nº Expediente",
+        "titulo":"Titulo/objeto :",
+        "organos_firmantes":"Órganos firmantes:",
+        "firmantes":"Firmantes",
+        "obligados":"Obligados",
+        "entidades_firmantes":"Entidades firmantes:",
+        "entidad":"Entidad",
+        "tipo_convenio":"Tipo Convenio:",
+        "materia":"Materia:",
+        "anexos":"Anexos",
+        "vigencia":"Vigencia:",
+        "importe":"Importe(totales):",
+        "desde":"Desde:",
+        "hasta":"Hasta:",
+        "ingresos":"Ingresos:",
+        "gastos":"Gastos",
+        "prorroga":"Prórroga:",
+        "duracion":"Duración:"
     }
 }
