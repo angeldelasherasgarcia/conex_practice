@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ConveniosService } from './../../../../services/convenios/convenios.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalTwoButtonComponent } from '../../../../layouts/modal-two-button/modal-two-button.component';
@@ -8,6 +8,7 @@ import { ModalTwoButtonComponent } from '../../../../layouts/modal-two-button/mo
   styleUrls: ['./folders.component.css']
 })
 export class FoldersComponent implements OnInit {
+  @Input() listDetailsAgreement: any;
   private modal: any;
   constructor(public conveniosService: ConveniosService,
     private modalService: NgbModal) { }
@@ -23,14 +24,15 @@ export class FoldersComponent implements OnInit {
    * 3. Una vez llamado al servicio se muestra o se descarga el pdf en función del
    * boton que el usuario haya pulsado en el modal.
    */
-  public downloadFile(): any {
+  public downloadFile(lista): any {
     this.modal = this.modalService.open(ModalTwoButtonComponent);
+    this.modal.componentInstance.archivo = lista;
     this.modal.result.then((resultModal) => {
       if (resultModal !== '') {
         this.conveniosService.getFile().subscribe(
           result => {
             if (resultModal === 'guardar') {
-              this.downLoadCurrentFile(result);
+              this.downLoadCurrentFile(result, lista);
             };
             if (resultModal === 'abrir') {
               this.showCurrentFile(result)
@@ -48,12 +50,12 @@ export class FoldersComponent implements OnInit {
    * @param blob Archivo que se va a descargar
    * @description Descargar del archivo de pdf 
    */
-  public downLoadCurrentFile(blob): void {
+  public downLoadCurrentFile(blob, lista): void {
     var a = document.createElement("a");
     document.body.appendChild(a);
     var url = window.URL.createObjectURL(blob);
     a.href = url;
-    a.download = 'pdffile';
+    a.download = lista.name;
     a.click();
   }
   /**

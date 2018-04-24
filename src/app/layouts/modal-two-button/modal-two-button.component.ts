@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -7,7 +7,8 @@ import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-
   styleUrls: ['./modal-two-button.component.css']
 })
 export class ModalTwoButtonComponent implements OnInit {
-
+  @Input() archivo;
+ 
   constructor(private modalService: NgbModal,
     public activeModal: NgbActiveModal) { }
 

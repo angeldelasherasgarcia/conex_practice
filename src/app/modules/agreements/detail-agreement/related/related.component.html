@@ -1,3 +1,17 @@
-<p>
-  related works!
-</p>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col" style="width: 15%">{{'related.num_convenio' | translate}}</th>
+        <th scope="col" style="width: 15%">{{'related.fecha' | translate}}</th>
+        <th scope="col" style="width: 70%">{{'related.titulo' | translate}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let list of listRelated| paginate :{itemsPerPage: 7 , currentPage:pagination}">
+        <td style="width: 15%">{{list.registered.substr(0,10)}}</td>
+        <td style="width: 15%">{{list.name}}</td>
+        <td style="width: 70%">{{list.about.substr(0,100)+"..."}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="pagination=$event"></pagination-controls>

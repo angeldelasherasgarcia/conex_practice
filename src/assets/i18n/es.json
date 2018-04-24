@@ -59,5 +59,10 @@
         "nombreFichero":"Nombre fichero:",
         "descripcion":"Descripción:",
         "descargar":"Descargar"
+    },
+    "related":{
+        "num_convenio": "Nº Convenio:",
+        "fecha":"Fecha:",
+        "titulo":"Título:"
     }
 }

@@ -4,7 +4,9 @@ import { Observable } from 'rxjs/Observable';
 import {
   CARGA_SELECT,
   DETAIL_AGREEMENT,
-  URL_PDF
+  URL_PDF,
+  DETAIL_AGREEMENT_2,
+  LIST_RELATED
 } from './../../app.constants';
 @Injectable()
 export class ConveniosService {
@@ -53,5 +55,11 @@ export class ConveniosService {
   }
   public getFile(): Observable<any> {
     return this.http.get(URL_PDF, { responseType: 'blob' });
+  }
+  public getListDetailAgreement():any{
+    return this.http.get(DETAIL_AGREEMENT_2);
+  }
+  public getListRealted():any{
+    return this.http.get(LIST_RELATED);
   }
 }

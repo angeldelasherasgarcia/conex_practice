@@ -11,6 +11,8 @@ export class DetailAgreementComponent implements OnInit {
   public isSelected: string = 'convenios';
   public selected_agreement: any[];
   public details_agreement: any[];
+  public list_details_agreement:any[];
+  public list_related:any[];
   private modal: any;
   constructor(public conveniosService: ConveniosService,
     private modalService: NgbModal) {
@@ -31,6 +33,22 @@ export class DetailAgreementComponent implements OnInit {
       },
       error => {
         this.showModal()
+      }
+    )
+    this.conveniosService.getListDetailAgreement().subscribe(
+      result =>{
+         this.list_details_agreement=result
+      },
+      error =>{
+        this.showModal()
+      }
+    )
+    this.conveniosService.getListRealted().subscribe(
+      result =>{
+        this.list_related = result
+      },
+      error =>{
+        this.showModal();
       }
     )
   }
