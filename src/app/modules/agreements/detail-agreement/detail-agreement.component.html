@@ -14,6 +14,8 @@
     </li>
   </ul>
 </div>
-<app-show-detail *ngIf="isSelected ==='convenios'"></app-show-detail>
+<app-show-detail    *ngIf="isSelected ==='convenios'"
+                    [detailAgreement]="details_agreement">
+                </app-show-detail>
 <app-related *ngIf="isSelected ==='archivos'"></app-related>
 <app-folders *ngIf="isSelected ==='relacionados'"></app-folders>

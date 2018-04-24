@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-show-detail',
@@ -6,10 +6,43 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show-detail.component.css']
 })
 export class ShowDetailComponent implements OnInit {
-
-  constructor() { }
+  @Input() detailAgreement: any ;
+  public prueba:any;
+  constructor() {
+    this.initObject();
+  }
 
   ngOnInit() {
+  }
+  initObject() {
+    this.detailAgreement = {
+      fecha_formalizacion: '',
+      num_expediente: '',
+      titulo: '',
+      num_convenio: '',
+      organos_firmantes: {
+        firmantes: '',
+        obligatorios: ''
+      },
+      entidades_firmantes: {
+        entidad: '',
+        firmates: '',
+        obligados: ''
+      },
+      tipo_convenio: '',
+      materia: '',
+      anexos: '',
+      vigencia: {
+        desde: '',
+        hasta: ''
+      },
+      importe: {
+        ingresos: '',
+        gastos: ''
+      },
+      prorroga: '',
+      duracion: ''
+    };
   }
 
 }

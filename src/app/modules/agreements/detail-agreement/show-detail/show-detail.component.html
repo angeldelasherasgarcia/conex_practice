@@ -1,4 +1,4 @@
-<div class="border-box header_div">
+<div *ngIf="detailAgreement" class="border-box header_div">
   <div class="title-box">
     {{'show-details-agreements.datos_convenio' | translate}}
   </div>
@@ -9,7 +9,11 @@
           {{'show-details-agreements.fecha_formalizacion' | translate}}
         </div>
         <div class="body_box">
-          <input type="text" class="new_form_control margin_input" disabled>
+          <input  type="text" 
+                  class="new_form_control margin_input" 
+                  [(ngModel)]="detailAgreement.fecha_formalizacion" 
+                  name="num_convenio"
+                  disabled>
         </div>
       </div>
       <div class="col">
@@ -17,7 +21,8 @@
           {{'show-details-agreements.num_expediente' | translate}}
         </div>
         <div class="body_box">
-          <input type="text" class="new_form_control margin_input" disabled>
+          <input type="text" class="new_form_control margin_input" [(ngModel)]="detailAgreement.num_expediente" name="num_expediente"
+            disabled>
         </div>
       </div>
     </div>
@@ -25,7 +30,11 @@
       <div class="col">
         <form class="form-inline margin_form">
           <label class="my-1 mr-2">{{'show-details-agreements.titulo' | translate}}</label>
-          <select class="custom-select margin_select" disabled>
+          <select class="custom-select margin_select" 
+                  [(ngModel)]="detailAgreement.titulo" 
+                  name="titulo" 
+                  disabled>
+                  <option >{{detailAgreement.titulo}}</option>
           </select>
         </form>
       </div>
@@ -39,11 +48,13 @@
           <div class="row">
             <div class="col">
               {{'show-details-agreements.firmantes' | translate}}
-              <input type="text" class="new_form_control margin_input" disabled>
+              <input type="text" class="new_form_control margin_input" [(ngModel)]="detailAgreement.organos_firmantes.firmantes" name="firmantes"
+                disabled>
             </div>
             <div class="col">
               {{'show-details-agreements.obligados' | translate}}
-              <input type="text" class="new_form_control margin_input" disabled>
+              <input type="text" class="new_form_control margin_input" [(ngModel)]="detailAgreement.organos_firmantes.obligatorios" name="obligatorios"
+                disabled>
             </div>
           </div>
         </div>
@@ -57,16 +68,19 @@
         <div class="body_big_box">
           <div class="row">
             <div class="col">
-                {{'show-details-agreements.entidad' | translate}}
-                <input type="text" class="new_form_control margin_input" disabled>
+              {{'show-details-agreements.entidad' | translate}}
+              <input type="text" class="new_form_control margin_input" [(ngModel)]="detailAgreement.entidades_firmantes.entidad" name="entidad"
+                disabled>
             </div>
             <div class="col">
-                {{'show-details-agreements.firmantes' | translate}}
-                <input type="text" class="new_form_control margin_input" disabled>
+              {{'show-details-agreements.firmantes' | translate}}
+              <input type="text" class="new_form_control margin_input" [(ngModel)]="detailAgreement.entidades_firmantes.firmates" name="firmates"
+                disabled>
             </div>
             <div class="col">
-                {{'show-details-agreements.obligados' | translate}}
-                <input type="text" class="new_form_control margin_input" disabled>
+              {{'show-details-agreements.obligados' | translate}}
+              <input type="text" class="new_form_control margin_input" [(ngModel)]="detailAgreement.entidades_firmantes.obligados" name="obligados"
+                disabled>
             </div>
           </div>
         </div>
@@ -77,7 +91,8 @@
         <div class="form-group row" style="margin-left: 28%">
           <label for="inputPassword">{{'show-details-agreements.tipo_convenio' | translate}}</label>
           <div class="col-sm-7">
-            <input input type="text" class="new_form_control margin_input_3col" disabled>
+            <input type="text" class="new_form_control margin_input_3col" [(ngModel)]="detailAgreement.tipo_convenio" name="tipo_convenio"
+              disabled>
           </div>
         </div>
       </div>
@@ -85,7 +100,7 @@
         <div class="form-group row" style="margin-left: 20%">
           <label for="inputPassword">{{'show-details-agreements.materia' | translate}}</label>
           <div class="col-sm-8">
-            <input input type="text" class="new_form_control margin_input_3col" disabled>
+            <input type="text" class="new_form_control margin_input_3col" [(ngModel)]="detailAgreement.materia" name="materia" disabled>
           </div>
         </div>
       </div>
@@ -93,7 +108,7 @@
         <div class="form-group row">
           <label for="inputPassword">{{'show-details-agreements.anexos' | translate}}</label>
           <div class="col-sm-6">
-            <input input type="text" class="new_form_control margin_input_3col" disabled>
+            <input type="text" class="new_form_control margin_input_3col" [(ngModel)]="detailAgreement.anexos" name="anexos" disabled>
           </div>
         </div>
       </div>
@@ -104,15 +119,45 @@
           {{'show-details-agreements.vigencia' | translate}}
         </div>
         <div class="body_box">
-          <input type="text" class="new_form_control margin_input" disabled>
+          <div class="form-group row margin_doble_input_box">
+            <div class="col-sm-2">
+              <label for="desde">{{'show-details-agreements.desde' | translate}}</label>
+            </div>
+            <div class="col-sm-8">
+              <input type="text" class="new_form_control margin_input" [(ngModel)]="detailAgreement.vigencia.desde" name="desde" disabled>
+            </div>
+          </div>
+          <div class="form-group row margin_doble_input_box">
+            <div class="col-sm-2">
+              <label for="hasta">{{'show-details-agreements.hasta' | translate}}</label>
+            </div>
+            <div class="col-sm-8">
+              <input type="text" class="new_form_control margin_input" [(ngModel)]="detailAgreement.vigencia.hasta" name="hasta" disabled>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col">
         <div class="title-box border-box box_header">
           {{'show-details-agreements.importe' | translate}}
         </div>
-        <div class="body_box">
-          <input type="text" class="new_form_control margin_input" disabled>
+        <div class="body_box ">
+          <div class="form-group row margin_doble_input_box">
+            <div class="col-sm-2">
+              <label for="ingresos">{{'show-details-agreements.ingresos' | translate}}</label>
+            </div>
+            <div class="col-sm-8">
+              <input type="text" class="new_form_control margin_input" [(ngModel)]="detailAgreement.importe.ingresos" name="ingresos" disabled>
+            </div>
+          </div>
+          <div class="form-group row margin_doble_input_box">
+            <div class="col-sm-2">
+              <label for="gastos">{{'show-details-agreements.gastos' | translate}}</label>
+            </div>
+            <div class="col-sm-8">
+              <input type="text" class="new_form_control margin_input" [(ngModel)]="detailAgreement.importe.gastos" name="gastos" disabled>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -121,7 +166,7 @@
         <div class="form-group row" style="margin-left: 28%">
           <label for="inputPassword">{{'show-details-agreements.prorroga' | translate}}</label>
           <div class="col-sm-8">
-            <input input type="text" class="new_form_control margin_input_3col" disabled>
+            <input type="text" class="new_form_control margin_input_3col" [(ngModel)]="detailAgreement.prorroga" name="prorroga" disabled>
           </div>
         </div>
       </div>
@@ -129,7 +174,7 @@
         <div class="form-group row" style="margin-left: 20%">
           <label for="inputPassword">{{'show-details-agreements.duracion' | translate}}</label>
           <div class="col-sm-8">
-            <input input type="text" class="new_form_control margin_input_3col" disabled>
+            <input type="text" class="new_form_control margin_input_3col" [(ngModel)]="detailAgreement.duracion" name="duracion" disabled>
           </div>
         </div>
       </div>

@@ -12,10 +12,11 @@ import { Router } from '@angular/router';
 export class ListAgreementsComponent implements OnInit {
   public lista_registros: any = [];
   private modal: any;
+  public pagination: any;
   constructor(public conveniosService: ConveniosService,
-              public listaConv: ListaRegistroConveniosService,
-              private modalService: NgbModal,
-              public router: Router) { }
+    public listaConv: ListaRegistroConveniosService,
+    private modalService: NgbModal,
+    public router: Router) { }
 
   ngOnInit() {
     this.callService();
@@ -47,8 +48,8 @@ export class ListAgreementsComponent implements OnInit {
         });
     };
   }
-  public showDetails(object){
-    this.conveniosService.agreement_selected=object;
+  public showDetails(object) {
+    this.conveniosService.agreement_selected = object;
     this.router.navigate(['detail-agreement']);
   }
 }

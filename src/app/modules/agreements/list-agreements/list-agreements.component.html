@@ -10,7 +10,7 @@
   </thead>
   <tbody >
     <tr class="fileTable" 
-        *ngFor="let lista of lista_registros | paginate :{itemsPerPage: 7 , currentPage:p}"
+        *ngFor="let lista of lista_registros | paginate :{itemsPerPage: 7 , currentPage:pagination}"
         (click)="showDetails(lista)">
       <td style="width: 10%">{{lista.num_convenio}}</td>
       <td style="width: 15%">{{lista.tipo}}</td>
@@ -20,4 +20,4 @@
     </tr>
   </tbody>
 </table>
-<pagination-controls (pageChange)="p=$event"></pagination-controls>
+<pagination-controls (pageChange)="pagination=$event"></pagination-controls>

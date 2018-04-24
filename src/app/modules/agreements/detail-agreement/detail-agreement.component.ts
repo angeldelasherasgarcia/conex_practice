@@ -10,14 +10,16 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class DetailAgreementComponent implements OnInit {
   public isSelected: string = 'convenios';
   public selected_agreement: any[];
-  public datails_agreement: any[];
+  public details_agreement: any[];
   private modal: any;
   constructor(public conveniosService: ConveniosService,
-    private modalService: NgbModal) { }
+    private modalService: NgbModal) {
+      
+     }
 
   ngOnInit() {
-    this.selected_agreement = this.conveniosService.agreement_selected;
     this.callService();
+    this.selected_agreement = this.conveniosService.agreement_selected;
   }
   public showDetails(option): void {
     this.isSelected = option;
@@ -25,7 +27,7 @@ export class DetailAgreementComponent implements OnInit {
   public callService() {
     this.conveniosService.getDetailAgreement(this.selected_agreement).subscribe(
       result => {
-        this.datails_agreement = result.detalle_convenios
+        this.details_agreement = result.detalle_convenios
       },
       error => {
         this.showModal()
