@@ -2,13 +2,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import {
-        CARGA_SELECT,
-        DETAIL_AGREEMENT
-      } from './../../app.constants';
+  CARGA_SELECT,
+  DETAIL_AGREEMENT,
+  URL_PDF
+} from './../../app.constants';
 @Injectable()
 export class ConveniosService {
   public body_search_convenio: any;
-  public agreement_selected:any[];
+  public agreement_selected: any[];
   constructor(public http: HttpClient) { }
   public getCargaSelect(): Observable<any> {
     const apiUrl = CARGA_SELECT;
@@ -37,7 +38,7 @@ export class ConveniosService {
       organos_firmantes: seachCriteria.organos_firmantes !== '' ? seachCriteria.organos_firmantes : this.isEmpty(),
       tipo_convenio: seachCriteria.tipo_convenio !== '' ? seachCriteria.tipo_convenio : this.isEmpty(),
       tipo_entidades: seachCriteria.tipo_entidades !== '' ? seachCriteria.tipo_entidades : this.isEmpty(),
-      titulo: seachCriteria.titulo !== '' ? seachCriteria.titulo: this.isEmpty()
+      titulo: seachCriteria.titulo !== '' ? seachCriteria.titulo : this.isEmpty()
     });
     this.body_search_convenio = body;
   }
@@ -46,8 +47,11 @@ export class ConveniosService {
    */
   public isEmpty() {
   }
-  public getDetailAgreement(object):any{
+  public getDetailAgreement(object): any {
     const apiUrl = DETAIL_AGREEMENT;
-    return this.http.get(apiUrl,object)
+    return this.http.get(apiUrl, object)
+  }
+  public getFile(): Observable<any> {
+    return this.http.get(URL_PDF, { responseType: 'blob' });
   }
 }

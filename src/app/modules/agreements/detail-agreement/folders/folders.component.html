@@ -1,3 +1,20 @@
-<p>
-  folders works!
-</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col" style="width: 12%">{{'folder.fecha' | translate}}</th>
+      <th scope="col" style="width: 15%">{{'folder.nombreFichero' | translate}}</th>
+      <th scope="col" style="width: 15%">{{'folder.descripcion' | translate}}</th>
+      <th scope="col" style="width: 45%"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 10%">Algo</td>
+      <td style="width: 15%">Algo</td>
+      <td style="width: 15%">Algo</td>
+      <td class="down-load-file" style="width: 45%" (click)="downloadFile()">
+        <img class="ico_pdf" src="../../../assets/images/pdf_icono.ico"> {{'folder.descargar' | translate}}
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -53,5 +53,11 @@
         "gastos":"Gastos:",
         "prorroga":"Prórroga:",
         "duracion":"Duración:"
+    },
+    "folder":{
+        "fecha":"Fecha:",
+        "nombreFichero":"Nombre fichero:",
+        "descripcion":"Descripción:",
+        "descargar":"Descargar"
     }
 }
