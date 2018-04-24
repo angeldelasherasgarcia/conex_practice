@@ -1,0 +1,24 @@
+<div class="modal-content">
+  <div class="modal-header background-header-footer">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="activeModal.close('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="../../../assets/images/pdf_icono.ico">
+      </div>
+      <div class="col-md-8">
+        <p>¿Desea abrir o guardar este archivo?</p>
+        <p>nombreArchivo.pdf</p>
+        <p>fecha_de_archivo</p>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer background-header-footer">
+      <button type="button" class="btn btn-light">Abrir</button>
+    <button type="button" class="btn btn-light">Guardar</button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  </div>
+</div>

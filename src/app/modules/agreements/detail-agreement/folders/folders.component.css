@@ -3,4 +3,5 @@
 }
 .down-load-file:hover{
     cursor: pointer;
+    color: blue;
 }
