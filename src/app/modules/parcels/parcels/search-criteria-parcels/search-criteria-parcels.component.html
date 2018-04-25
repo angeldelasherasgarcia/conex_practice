@@ -1,0 +1,159 @@
+<form (ngSubmit)="searchCriteriaParcels()">
+  <div class="row margin-form">
+    <div class="col-md-12 header_serach_criteria">
+      {{'buscador-encomiendas.titulo' | translate}}
+    </div>
+  </div>
+  <div class="row margin-form">
+    <div class="col-md-1 offset-md-1">
+      {{'buscador-encomiendas.titulo-objeto' | translate}}
+    </div>
+    <div class="col-md-4 offset-md-1">
+      <input  type="text" 
+              class="form-control" 
+              name="titulo-objeto"
+              [(ngModel)]="encomiendas.titulo_objeto">
+    </div>
+  </div>
+  <div class="row margin-form">
+    <div class="col-md-2 offset-md-1">
+      {{'buscador-encomiendas.organo-responsable' | translate}}
+    </div>
+    <div class="col-md-8 ">
+      <select class="custom-select" 
+              name="organo_responsable"
+              [(ngModel)]="encomiendas.organo_responsable">
+        <option>Default</option>
+      </select>
+    </div>
+  </div>
+  <div class="row margin-form">
+    <div class="col-md-8 offset-md-3">
+      {{'buscador-encomiendas.description_organo' | translate}}
+    </div>
+  </div>
+  <div class="row margin-form">
+    <div class="col-md-3">
+      {{'buscador-encomiendas.fecha-formalizacion' | translate}}
+    </div>
+    <div class="col-md-1">
+      {{'buscador-encomiendas.desde' | translate}}
+    </div>
+    <div class="col-md-3">
+      <input  type="date" 
+              class="form-control" 
+              name="desde"
+              [(ngModel)]="encomiendas.fecha_formalizacion_desde">
+    </div>
+    <div class="col-md-1 ">
+      {{'buscador-encomiendas.hasta' | translate}}
+    </div>
+    <div class="col-md-3">
+      <input  type="date" 
+              class="form-control" 
+              name="hasta"
+              [(ngModel)]="encomiendas.fecha_formalizacion_hasta">
+    </div>
+  </div>
+  <div class="row margin-form">
+    <div class="col-md-2 offset-md-1">
+      {{'buscador-encomiendas.num_encomienda' | translate}}
+    </div>
+    <div class="col-md-8  form-inline">
+      <input  type="text" 
+              class="form-control" 
+              name="num_encomienda_0" 
+              style="width: 10%"
+              [(ngModel)]="encomiendas.num_encomienda_0">
+      <input type="text" class="form-control" placeholder="/" name="titulo-objeto" style="width: 5%" readonly>
+      <input  type="text" 
+              class="form-control" 
+              name="num_encomienda_1" 
+              style="width: 10%"
+              [(ngModel)]="encomiendas.num_encomienda_1">
+      <input type="text" class="form-control" placeholder="/" name="titulo-objeto" style="width: 5%" readonly>
+      <input  type="text" 
+              class="form-control" 
+              name="num_encomienda_2" 
+              style="width: 10%"
+              [(ngModel)]="encomiendas.num_encomienda_2">
+      <input type="text" class="form-control" placeholder="/" name="titulo-objeto" style="width: 5%" readonly>
+      <input  type="text" 
+              class="form-control" 
+              name="num_encomienda_3" 
+              style="width: 10%"
+              [(ngModel)]="encomiendas.num_encomienda_3">
+    </div>
+  </div>
+  <div class="row margin-form">
+    <div class="col-md-2 offset-md-1">
+      {{'buscador-encomiendas.importe_gastos' | translate}}
+    </div>
+    <div class="col-md-1">
+      {{'buscador-encomiendas.desde' | translate}}
+    </div>
+    <div class="col-md-2 ">
+      <input  type="text" 
+              class="form-control" 
+              name="importe_gastos_desde"
+              [(ngModel)]="encomiendas.importe_gastos_desde">
+    </div>
+    <div class="col-md-1 ">
+      {{'buscador-encomiendas.hasta' | translate}}
+    </div>
+    <div class="col-md-2 ">
+      <input  type="text" 
+              class="form-control" 
+              name="importe_gastos_hasta"
+              [(ngModel)]="encomiendas.importe_gastos_hasta">
+    </div>
+  </div>
+  <div class="row margin-form">
+    <div class="col-md-1 offset-md-1">
+      {{'buscador-encomiendas.encomendante' | translate}}
+    </div>
+    <div class="col-md-8 offset-md-1">
+      <input  type="text" 
+              class="form-control" 
+              name="encomendante"
+              [(ngModel)]="encomiendas.encomendante">
+    </div>
+  </div>
+  <div class="row margin-form">
+    <div class="col-md-1 offset-md-1">
+      {{'buscador-encomiendas.encomendado' | translate}}
+    </div>
+    <div class="col-md-8 offset-md-1">
+      <input  type="text" 
+              class="form-control" 
+              name="encomendado"
+              [(ngModel)]="encomiendas.encomendado">
+    </div>
+  </div>
+  <div class="row margin-form">
+    <div class="col-md-2 offset-md-1">
+      {{'buscador-encomiendas.tipo_aportacion' | translate}}
+    </div>
+    <div class="col-md-3">
+      <select  class="custom-select" 
+               name="tipo_aportacion"
+               [(ngModel)]="encomiendas.tipo_aportacion">
+        <option>Default</option>
+      </select>
+    </div>
+    <div class="col-md-1">
+      {{'buscador-encomiendas.materia' | translate}}
+    </div>
+    <div class="col-md-3">
+      <select class="custom-select" 
+              name="materia"
+              [(ngModel)]="encomiendas.materia">
+        <option>Default</option>
+      </select>
+    </div>
+  </div>
+  <button type="submit" 
+          class="btn btn-default margin-button">
+    {{'buscador.buscar' | translate}}
+  </button>
+</form>

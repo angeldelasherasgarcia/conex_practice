@@ -1,0 +1,15 @@
+.header_serach_criteria{
+    background-color: rgb(211, 217, 226);
+    border: 6px solid rgb(211, 217, 226);
+    border-radius: 1.25rem;
+    margin-bottom: -0.8%;
+    color: white;
+    text-align: center;
+}
+.margin-form{
+    margin-bottom: 1%;
+}
+.margin-button{
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
