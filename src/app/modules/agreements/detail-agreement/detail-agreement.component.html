@@ -1,25 +1,25 @@
 <div>
-  <ul>
-    <li [ngClass]="{'isSelected': isSelected ==='convenios'}"
-        (click)="showDetails('convenios')">
-        Convenio + nombre
-    </li>
-    <li [ngClass]="{'isSelected': isSelected ==='archivos'}"
-        (click)="showDetails('archivos')">
-        Archivos
-    </li>
-    <li [ngClass]="{'isSelected': isSelected ==='relacionados'}"
-        (click)="showDetails('relacionados')">
-        Relacionados
-    </li>
-  </ul>
+    <ul>
+        <li [ngClass]="{'isSelected': isSelected ==='convenios'}" (click)="showDetails('convenios')">
+            Convenio + nombre
+        </li>
+        <li [ngClass]="{'isSelected': isSelected ==='archivos'}" (click)="showDetails('archivos')">
+            Archivos
+        </li>
+        <li [ngClass]="{'isSelected': isSelected ==='relacionados'}" (click)="showDetails('relacionados')">
+            Relacionados
+        </li>
+    </ul>
 </div>
-<app-show-detail    *ngIf="isSelected ==='convenios'"
-                    [detailAgreement]="details_agreement">
-                </app-show-detail>
-<app-related    *ngIf="isSelected ==='relacionados'"
-                [listRelated]="list_related">
-            </app-related>
-<app-folders    *ngIf="isSelected ==='archivos'"
-                [listDetailsAgreement]="list_details_agreement">
-            </app-folders>
+<app-show-detail *ngIf="isSelected ==='convenios'" [detailAgreement]="details_agreement">
+</app-show-detail>
+<app-related *ngIf="isSelected ==='relacionados'" [listRelated]="list_related">
+</app-related>
+<app-folders *ngIf="isSelected ==='archivos'" [listDetailsAgreement]="list_details_agreement">
+</app-folders>
+<button *ngIf="isSelected !=='convenios'" 
+        type="button" 
+        class="btn btn-default"
+        (click)="returnOption()">
+    Volver
+</button>

@@ -18,3 +18,9 @@
 .entidades{
     margin-top: -1%;
 }
+.header_serach_criteria{
+    background-color: rgb(211, 217, 226);
+    margin-bottom: -0.8%;
+    color: white;
+    text-align: center;
+}

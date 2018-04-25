@@ -59,4 +59,11 @@ export class DetailAgreementComponent implements OnInit {
     this.modal.result.then((result) => {
     })
   }
+  public returnOption(){
+    if(this.isSelected==='archivos'){
+      this.isSelected = 'convenios'
+    }else{
+      this.isSelected = 'archivos'
+    }
+  }
 }
