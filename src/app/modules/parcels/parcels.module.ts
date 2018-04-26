@@ -10,6 +10,7 @@ import { ParcelsService } from './servicios/parcels.service';
 import { ListParcelsComponent } from './parcels/list-parcels/list-parcels.component';
 import { NgxPaginationModule} from 'ngx-pagination';
 import { DetailsParcelsComponent } from './parcels/details-parcels/details-parcels.component';
+import { CommonsElementsModule } from '../../commons-elements/commons-elements.module';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -26,7 +27,8 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     FormsModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    CommonsElementsModule
   ],
   declarations: [
     ParcelsComponent,

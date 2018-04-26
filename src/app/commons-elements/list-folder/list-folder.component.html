@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col" style="width: 12%">{{'folder.fecha' | translate}}</th>
+      <th scope="col" style="width: 15%">{{'folder.nombreFichero' | translate}}</th>
+      <th scope="col" style="width: 15%">{{'folder.descripcion' | translate}}</th>
+      <th scope="col" style="width: 45%"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let lista of listDetailsAgreement| paginate :{itemsPerPage: 7 , currentPage:pagination}">
+      <td style="width: 10%">{{lista.registered.substr(0,10)}}</td>
+      <td style="width: 15%">{{lista.name}}</td>
+      <td style="width: 50%">{{lista.about}}</td>
+      <td class="down-load-file" style="width: 10%" (click)="downloadFile(lista)">
+        <img class="ico_pdf" src="../../../assets/images/pdf_icono.ico"> {{'folder.descargar' | translate}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="pagination=$event"></pagination-controls>

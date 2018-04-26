@@ -40,7 +40,6 @@ export class FoldersComponent implements OnInit {
             };
           },
           error => {
-            console.log(error);
           }
         )
       }

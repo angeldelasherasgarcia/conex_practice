@@ -24,7 +24,6 @@ export class ListParcelsComponent implements OnInit {
         this.list_encomiendas=result;
       },
       error =>{
-        console.log(error)
       }
     )
   }

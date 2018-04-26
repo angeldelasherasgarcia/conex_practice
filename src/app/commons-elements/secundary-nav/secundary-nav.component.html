@@ -1,0 +1,13 @@
+<div>
+  <ul>
+      <li [ngClass]="{'isSelected': isSelected ==='convenios'}" (click)="showDetails('convenios')">
+          Encomienda + nombre
+      </li>
+      <li [ngClass]="{'isSelected': isSelected ==='archivos'}" (click)="showDetails('archivos')">
+          Archivos
+      </li>
+      <li [ngClass]="{'isSelected': isSelected ==='relacionados'}" (click)="showDetails('relacionados')">
+          Relacionados
+      </li>
+  </ul>
+</div>

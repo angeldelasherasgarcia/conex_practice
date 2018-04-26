@@ -50,10 +50,8 @@ export class SearchCriteriaParcelsComponent implements OnInit {
         this.organo_responsable=result.organo_reponsable;
         this.materia=result.materia;
         this.tipo_aportacion = result.tipo_aprobacion;
-        console.log(result)
       },
       error =>{
-        console.log(error)
       }
     )
   }

@@ -13,7 +13,6 @@ export class ErrorComponent implements OnInit {
     public activeModal: NgbActiveModal) { }
   
   ngOnInit(): void {
-    console.log(this.data)
   }
   open(content) {
     this.modalService.open(content).result.then((result) => {
