@@ -73,12 +73,18 @@
         "fecha-formalizacion":"Fecha de formalización:",
         "desde":"Desde:",
         "hasta":"Hasta:",
-        "description_organo":"(*)Las Encomienda de Gestión suscritas por los distritos , están asociados a la SGT a la que figure adscrita la Oficina del Secretario de la Junta de Gobierno.",
+        "description_organo":"(*)Las Encomiendas de Gestión suscritas por los distritos , están asociados a la SGT a la que figure adscrita la Oficina del Secretario de la Junta de Gobierno.",
         "num_encomienda":"Nº de encomienda:",
         "importe_gastos":"Importe gastos:",
         "encomendante":"Encomendante:",
         "encomendado":"Encomendado:",
         "tipo_aportacion":"Tipo de aportación:",
         "materia":"Materia:"
+    },
+    "lista-encomiendas":{
+       "num_encomienda":"Nº encomienda",
+       "fecha_formalizacion":"Fecha de formalización:",
+       "titulo":"Titulo:",
+       "vigencia":"Vigencia:" 
     }
 }

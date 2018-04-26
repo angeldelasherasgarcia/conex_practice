@@ -23,7 +23,9 @@
     <div class="col-md-8 ">
       <select class="custom-select" 
               name="organo_responsable"
-              [(ngModel)]="encomiendas.organo_responsable">
+              [(ngModel)]="encomiendas.organo_responsable"
+              (change)="hiddenDefaultOption()">
+        <option [hidden]="hiddenDefault">Selecione</option>
         <option *ngFor="let organo of organo_responsable">{{organo.name}}</option>
       </select>
     </div>
@@ -138,7 +140,9 @@
     <div class="col-md-3">
       <select  class="custom-select" 
                name="tipo_aportacion"
-               [(ngModel)]="encomiendas.tipo_aportacion">
+               [(ngModel)]="encomiendas.tipo_aportacion"
+               (change)="hiddenDefaultOption()">
+        <option [hidden]="hiddenDefault">Selecione</option>
         <option *ngFor="let aportacion of tipo_aportacion">{{aportacion.name}}</option>
       </select>
     </div>
@@ -148,7 +152,9 @@
     <div class="col-md-3">
       <select class="custom-select" 
               name="materia"
-              [(ngModel)]="encomiendas.materia">
+              [(ngModel)]="encomiendas.materia"
+              (change)="hiddenDefaultOption()">
+        <option [hidden]="hiddenDefault">Selecione</option>
         <option *ngFor="let materia of materia">{{materia.name}}</option>
       </select>
     </div>

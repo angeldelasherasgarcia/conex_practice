@@ -6,7 +6,9 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ParcelsService } from './servicios/parcels.service'
+import { ParcelsService } from './servicios/parcels.service';
+import { ListParcelsComponent } from './parcels/list-parcels/list-parcels.component';
+import { NgxPaginationModule} from 'ngx-pagination';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -22,11 +24,13 @@ export function createTranslateLoader(http: HttpClient) {
       }
     }),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   declarations: [
     ParcelsComponent,
-    SearchCriteriaParcelsComponent
+    SearchCriteriaParcelsComponent,
+    ListParcelsComponent
   ],
   providers: [
     ParcelsService
