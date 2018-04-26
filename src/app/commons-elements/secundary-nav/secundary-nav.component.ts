@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-secundary-nav',
@@ -6,12 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./secundary-nav.component.css']
 })
 export class SecundaryNavComponent implements OnInit {
-  public isSelected: string = 'convenios';
+  @Input() titulos:string;
+  @Output() optionSelected = new EventEmitter();
+  public isSelected: string;
   constructor() { }
 
   ngOnInit() {
+    this.isSelected = this.titulos[0];
   }
   public showDetails(option): void {
     this.isSelected = option;
+    this.optionSelected.emit(this.isSelected);
   }
 }

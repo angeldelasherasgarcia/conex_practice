@@ -11,6 +11,7 @@ import { ListParcelsComponent } from './parcels/list-parcels/list-parcels.compon
 import { NgxPaginationModule} from 'ngx-pagination';
 import { DetailsParcelsComponent } from './parcels/details-parcels/details-parcels.component';
 import { CommonsElementsModule } from '../../commons-elements/commons-elements.module';
+import { DetailComponent } from './parcels/details-parcels/detail/detail.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -34,7 +35,8 @@ export function createTranslateLoader(http: HttpClient) {
     ParcelsComponent,
     SearchCriteriaParcelsComponent,
     ListParcelsComponent,
-    DetailsParcelsComponent
+    DetailsParcelsComponent,
+    DetailComponent
   ],
   providers: [
     ParcelsService

@@ -1,4 +1,10 @@
-<app-secundary-nav></app-secundary-nav>
-<app-list-folder [listDetailsAgreement]="list_details_agreement"
-                 (resultModal)="getResultModal($event)">
+<app-secundary-nav (optionSelected)="getOptionSelected($event)"
+                    [titulos]="titulos"></app-secundary-nav>
+<app-detail *ngIf="isSelected === titulos[0]" ></app-detail>
+<app-list-folder  *ngIf="isSelected === titulos[1]"
+                  [listDetailsAgreement]="list_details_agreement"
+                  (resultModal)="getResultModal($event)">
 </app-list-folder>
+<app-list-related  *ngIf="isSelected === titulos[2]" 
+                   [listRelated]="list_realted">
+</app-list-related>

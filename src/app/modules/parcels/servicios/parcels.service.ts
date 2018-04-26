@@ -2,7 +2,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {  CARGA_SELECT_ENCOMIENDAS,
           LISTA_ENCOMIENDAS,
-          LISTADO_DETALLE_ENCOMIENDA } 
+          LISTADO_DETALLE_ENCOMIENDA,
+          LIST_RELATED } 
           from './../../../app.constants';
 @Injectable()
 export class ParcelsService {
@@ -16,5 +17,8 @@ export class ParcelsService {
   }
   public getListaDetalleEncomiendas():any{
     return this.http.get(LISTADO_DETALLE_ENCOMIENDA);
+  }
+  public getRelatedList():any{
+    return this.http.get(LIST_RELATED);
   }
 }

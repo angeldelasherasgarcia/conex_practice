@@ -1,0 +1,160 @@
+<div  class="border-box header_div">
+  <div class="title-box">
+    {{'show-details-agreements.datos_convenio' | translate}}
+  </div>
+  <div class="body-box">
+    <div class="row">
+      <div class="col">
+        <div class="title-box border-box box_header">
+          {{'show-details-agreements.fecha_formalizacion' | translate}}
+        </div>
+        <div class="body_box">
+          <input  type="text" 
+                  class="new_form_control margin_input" 
+                  name="num_convenio"
+                  disabled>
+        </div>
+      </div>
+      <div class="col">
+        <div class="title-box border-box box_header">
+          {{'show-details-agreements.num_expediente' | translate}}
+        </div>
+        <div class="body_box">
+          <input type="text" class="new_form_control margin_input"  name="num_expediente"
+            disabled>
+        </div>
+      </div>
+      <div class="col">
+        <div class="title-box border-box box_header">
+          {{'show-details-parcels.tipo_aprobacion' | translate}}
+        </div>
+        <div class="body_box">
+          <input type="text" class="new_form_control margin_input"  name="tipo_aprobacion"
+            disabled>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <form class="form-inline margin_form">
+          <label class="my-1 mr-2">{{'show-details-agreements.titulo' | translate}}</label>
+          <select class="custom-select margin_select" 
+                  name="titulo" 
+                  disabled>
+                  <option >Default</option>
+          </select>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="title-box border-box big_box_header">
+          {{'show-details-parcels.encomendante' | translate}}
+        </div>
+        <div class="body_big_box">
+          <div class="row">
+            <div class="col">
+              {{'show-details-parcels.encomendante' | translate}}
+              <input type="text" 
+                      class="new_form_control margin_input" 
+                      name="encomendante"
+                      disabled>
+            </div>
+            <div class="col">
+              {{'show-details-agreements.obligados' | translate}}
+              <input type="text" class="new_form_control margin_input"  name="obligatorios"
+                disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="title-box border-box big_box_header">
+          {{'show-details-parcels.encomendado' | translate}}
+        </div>
+        <div class="body_big_box">
+          <div class="row">
+            <div class="col">
+              {{'show-details-parcels.encomendado' | translate}}
+              <input type="text" class="new_form_control margin_input"  name="entidad"
+                disabled>
+            </div>
+            <div class="col">
+              {{'show-details-agreements.obligados' | translate}}
+              <input type="text" class="new_form_control margin_input"  name="obligados"
+                disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="title-box border-box box_header">
+          {{'show-details-agreements.vigencia' | translate}}
+        </div>
+        <div class="body_box">
+          <div class="form-group row margin_doble_input_box">
+            <div class="col-sm-2">
+              <label for="desde">{{'show-details-agreements.desde' | translate}}</label>
+            </div>
+            <div class="col-sm-8">
+              <input type="text" class="new_form_control margin_input"  name="desde" disabled>
+            </div>
+          </div>
+          <div class="form-group row margin_doble_input_box">
+            <div class="col-sm-2">
+              <label for="hasta">{{'show-details-agreements.hasta' | translate}}</label>
+            </div>
+            <div class="col-sm-8">
+              <input type="text" class="new_form_control margin_input"  name="hasta" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="title-box border-box box_header">
+          {{'show-details-agreements.importe' | translate}}
+        </div>
+        <div class="body_box ">
+          <div class="form-group row margin_doble_input_box">
+            <div class="col-sm-2">
+              <label for="ingresos">{{'show-details-agreements.ingresos' | translate}}</label>
+            </div>
+            <div class="col-sm-8">
+              <input type="text" class="new_form_control margin_input"  name="ingresos" disabled>
+            </div>
+          </div>
+          <div class="form-group row margin_doble_input_box">
+            <div class="col-sm-2">
+              <label for="gastos">{{'show-details-agreements.gastos' | translate}}</label>
+            </div>
+            <div class="col-sm-8">
+              <input type="text" class="new_form_control margin_input"  name="gastos" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group row" style="margin-left: 28%">
+          <label for="inputPassword">{{'show-details-parcels.materia' | translate}}</label>
+          <div class="col-sm-8">
+            <input type="text" class="new_form_control margin_input_3col"  name="prorroga" disabled>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group row" style="margin-left: 20%">
+          <label for="inputPassword">{{'show-details-parcels.anexos' | translate}}</label>
+          <div class="col-sm-8">
+            <input type="text" class="new_form_control margin_input_3col"  name="duracion" disabled>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
