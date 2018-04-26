@@ -2,17 +2,19 @@
   <thead>
     <tr>
       <th scope="col" style="width: 15%">{{'lista-encomiendas.num_encomienda' | translate}}</th>
-      <th scope="col" style="width: 15%">{{'lista-encomiendas.fecha_formalizacion' | translate}}</th>
+      <th scope="col" style="width: 25%">{{'lista-encomiendas.fecha_formalizacion' | translate}}</th>
       <th scope="col" style="width: 45%">{{'lista-encomiendas.titulo' | translate}}</th>
-      <th scope="col" style="width: 25%">{{'lista-encomiendas.vigencia' | translate}}</th>
+      <th scope="col" style="width: 15%">{{'lista-encomiendas.vigencia' | translate}}</th>
     </tr>
   </thead>
   <tbody >
-    <tr>
-      <td style="width: 15%">Algo</td>
-      <td style="width: 15%">Algo</td>
-      <td style="width: 45%">Algo</td>
-      <td style="width: 25%">Algo</td>
+    <tr class="fileTable"
+        *ngFor="let lista of list_encomiendas | paginate :{itemsPerPage: 7 , currentPage:pagination}"
+        (click)="showDetails(lista)">
+      <td style="width: 15%">{{lista.num_encomienda}}</td>
+      <td style="width: 25%">{{lista.fecha_formalizacion.substr(0,10)}}</td>
+      <td style="width: 45%">{{lista.titulo.substr(0,100)+"..."}}</td>
+      <td style="width: 15%">{{lista.vigencia.substr(0,10)}}</td>
     </tr>
   </tbody>
 </table>

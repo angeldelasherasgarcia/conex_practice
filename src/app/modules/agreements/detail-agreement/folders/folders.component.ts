@@ -9,6 +9,7 @@ import { ModalTwoButtonComponent } from '../../../../layouts/modal-two-button/mo
 })
 export class FoldersComponent implements OnInit {
   @Input() listDetailsAgreement: any;
+  public pagination:any;
   private modal: any;
   constructor(public conveniosService: ConveniosService,
     private modalService: NgbModal) { }

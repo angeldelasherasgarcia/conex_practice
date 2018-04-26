@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RelatedComponent implements OnInit {
   @Input() listRelated: any;
+  public pagination : any;
   constructor() { }
 
   ngOnInit() {
