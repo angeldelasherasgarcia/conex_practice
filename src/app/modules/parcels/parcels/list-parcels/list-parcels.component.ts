@@ -16,7 +16,7 @@ export class ListParcelsComponent implements OnInit {
     this.callService();
   }
   public showDetails(lista):void{
-    this.router.navigate(['list_parcels']);
+    this.router.navigate(['details_parcels']);
   }
   public callService():void{
     this.parcelService.getCargaListEncomiendas().subscribe(
