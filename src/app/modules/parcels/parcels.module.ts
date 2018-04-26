@@ -6,6 +6,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ParcelsService } from './servicios/parcels.service'
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -26,6 +27,9 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [
     ParcelsComponent,
     SearchCriteriaParcelsComponent
+  ],
+  providers: [
+    ParcelsService
   ],
   exports: [
     ParcelsComponent

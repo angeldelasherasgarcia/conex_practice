@@ -1,9 +1,10 @@
-<form (ngSubmit)="searchCriteriaParcels()">
+
   <div class="row margin-form">
-    <div class="col-md-12 header_serach_criteria">
+    <div class="col-md-11 header_serach_criteria">
       {{'buscador-encomiendas.titulo' | translate}}
     </div>
   </div>
+  <form (ngSubmit)="searchCriteriaParcels()">
   <div class="row margin-form">
     <div class="col-md-1 offset-md-1">
       {{'buscador-encomiendas.titulo-objeto' | translate}}
@@ -23,7 +24,7 @@
       <select class="custom-select" 
               name="organo_responsable"
               [(ngModel)]="encomiendas.organo_responsable">
-        <option>Default</option>
+        <option *ngFor="let organo of organo_responsable">{{organo.name}}</option>
       </select>
     </div>
   </div>
@@ -33,7 +34,7 @@
     </div>
   </div>
   <div class="row margin-form">
-    <div class="col-md-3">
+    <div class="col-md-2 offset-md-1">
       {{'buscador-encomiendas.fecha-formalizacion' | translate}}
     </div>
     <div class="col-md-1">
@@ -138,7 +139,7 @@
       <select  class="custom-select" 
                name="tipo_aportacion"
                [(ngModel)]="encomiendas.tipo_aportacion">
-        <option>Default</option>
+        <option *ngFor="let aportacion of tipo_aportacion">{{aportacion.name}}</option>
       </select>
     </div>
     <div class="col-md-1">
@@ -148,7 +149,7 @@
       <select class="custom-select" 
               name="materia"
               [(ngModel)]="encomiendas.materia">
-        <option>Default</option>
+        <option *ngFor="let materia of materia">{{materia.name}}</option>
       </select>
     </div>
   </div>

@@ -3,3 +3,4 @@ export const DETAIL_AGREEMENT = './assets/data/detalle_convenios.json';
 export const URL_PDF ='./assets/data/ICDSALAMANCA.pdf';
 export const DETAIL_AGREEMENT_2 = './assets/data/detail-agreement.json';
 export const LIST_RELATED = './assets/data/list_realted.json';
+export const CARGA_SELECT_ENCOMIENDAS = './assets/data/carga-select-encomiendas.json';

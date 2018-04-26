@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm, FormControl, FormGroup, FormBuilder } from '@angular/forms'
+import { NgForm, FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { ParcelsService } from './../../servicios/parcels.service';
 @Component({
   selector: 'app-search-criteria-parcels',
   templateUrl: './search-criteria-parcels.component.html',
@@ -7,9 +8,13 @@ import { NgForm, FormControl, FormGroup, FormBuilder } from '@angular/forms'
 })
 export class SearchCriteriaParcelsComponent implements OnInit {
   public encomiendas: any;
-  constructor() { }
+  public organo_responsable: any;
+  public materia: any;
+  public tipo_aportacion:any;
+  constructor( public parcelService: ParcelsService) { }
 
   ngOnInit() {
+    this.callService();
     this.initObject();
   }
   searchCriteriaParcels() {
@@ -32,5 +37,18 @@ export class SearchCriteriaParcelsComponent implements OnInit {
       tipo_aportacion: '',
       materia: ''
     };
+  }
+  public callService():void{
+    this.parcelService.getCargaSelectEncomiendas().subscribe(
+      result =>{
+        this.organo_responsable=result.organo_reponsable;
+        this.materia=result.materia;
+        this.tipo_aportacion = result.tipo_aprobacion;
+        console.log(result)
+      },
+      error =>{
+        console.log(error)
+      }
+    )
   }
 }
