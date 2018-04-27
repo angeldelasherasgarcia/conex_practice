@@ -59,7 +59,6 @@ export class DetailsParcelsComponent implements OnInit {
         }
       )
     };
-
   }
   public getOptionSelected(event): void {
     this.isSelected = event;
