@@ -5,11 +5,15 @@ import { AgreementsComponent,
          DetailAgreementComponent,
          ParcelsComponent,
          ListParcelsComponent,
-         DetailsParcelsComponent
+         DetailsParcelsComponent,
+         ListCriteriaDecreesComponent,
+         DetailDecreesComponent
         } from "./project.pages";
 const routes: Routes = [
     { path: '', component: AgreementsComponent },
     { path: 'decrees', component: DecreesResolutionsComponent },
+    { path: 'list-decrees', component: ListCriteriaDecreesComponent },
+    { path: 'detail-decrees', component: DetailDecreesComponent },
     { path: 'list_agreements', component: ListAgreementsComponent },
     { path: 'detail-agreement', component: DetailAgreementComponent},
     { path: 'parcels', component: ParcelsComponent },

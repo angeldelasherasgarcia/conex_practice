@@ -105,5 +105,12 @@
         "sgts":"SGTs",
         "distritos":"Distritos",
         "ooaa":"OO.AA"
+    },
+    "list-decrees":{
+        "num_decreto":"Nº de Decreto/Resolución:",
+        "area":"Area:",
+        "tipo":"Tipo:",
+        "fecha":"Fecha:",
+        "descripcion":"Descripción:"
     }
 }

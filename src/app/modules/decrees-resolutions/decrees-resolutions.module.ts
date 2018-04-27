@@ -6,6 +6,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule} from 'ngx-pagination';
+import { ListCriteriaDecreesComponent } from './decrees-resolutions/list-criteria-decrees/list-criteria-decrees.component';
+import { DecreesResolutionsService } from './services/decrees-resolutions.service';
+import { DetailDecreesComponent } from './decrees-resolutions/detail-decrees/detail-decrees.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -20,8 +24,16 @@ export function createTranslateLoader(http: HttpClient) {
         useFactory: (createTranslateLoader),
         deps: [HttpClient]
       }
-    })
+    }),
+    NgxPaginationModule
   ],
-  declarations: [DecreesResolutionsComponent, SearchCriteriaDecreesComponent]
+  declarations: [
+    DecreesResolutionsComponent, 
+    SearchCriteriaDecreesComponent, 
+    ListCriteriaDecreesComponent, DetailDecreesComponent
+  ],
+  providers:[
+    DecreesResolutionsService
+  ]
 })
 export class DecreesResolutionsModule { }

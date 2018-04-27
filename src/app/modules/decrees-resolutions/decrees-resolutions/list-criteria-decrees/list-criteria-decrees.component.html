@@ -1,0 +1,23 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col" style="width: 20%">{{'list-decrees.num_decreto' | translate}}</th>
+      <th scope="col" style="width: 20%">{{'list-decrees.area' | translate}}</th>
+      <th scope="col" style="width: 10%">{{'list-decrees.tipo' | translate}}</th>
+      <th scope="col" style="width: 10%">{{'list-decrees.fecha' | translate}}</th>
+      <th scope="col" style="width: 45%">{{'list-decrees.descripcion' | translate}}</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr class="fileTable"
+        *ngFor="let lista of list_decretos | paginate :{itemsPerPage: 7 , currentPage:pagination}"
+        (click)="showDetails(lista)">
+      <td style="width: 20%">{{lista.num_decreto}}</td>
+      <td style="width: 20%">{{lista.area}}</td>
+      <td style="width: 10%">{{lista.tipo}}</td>
+      <td style="width: 10%">{{lista.fecha.substr(0,10)}}</td>
+      <td style="width: 45%">{{lista.decripcion.substr(0,100)+"..."}}</td>
+    </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="pagination=$event"></pagination-controls>

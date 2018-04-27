@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-criteria-decrees',
@@ -9,7 +10,7 @@ export class SearchCriteriaDecreesComponent implements OnInit {
   public decretos:any;
   public organosResponsables:any;
   public hiddenDefault:boolean = false;
-  constructor() {
+  constructor(public router: Router) {
     this.organosResponsables =[
       'SGts',
       'Distritos',
@@ -18,7 +19,6 @@ export class SearchCriteriaDecreesComponent implements OnInit {
   }
 
   ngOnInit() {
-    
     this.initObject();
   }
   initObject() {
@@ -35,7 +35,7 @@ export class SearchCriteriaDecreesComponent implements OnInit {
     };
   };
   public searchCriteriaDecrees():void{
-    console.log(this)
+    this.router.navigate(['list-decrees']);
   }
   public hiddenDefaultOption():void{
     this.hiddenDefault = true;
