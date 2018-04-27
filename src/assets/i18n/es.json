@@ -93,5 +93,17 @@
         "encomendado":"Encomendado:",
         "materia":"Materia:",
         "anexos":"Anexos"
+    },
+    "search-criteria-decrees":{
+        "titulo_busqueda":"Criterios de busqueda Decretos/Resoluciones",
+        "titulo":"Título:",
+        "organo-resolucion":"Órgano de resolución:", 
+        "fecha-aprobacion":"Fecha de Aprobación:", 
+        "num_decreto":"Nº de Decreto/Resolución:",
+        "num_expediente":"Nº Expediente:", 
+        "nombre_razon":"Nombre/Razón social:",
+        "sgts":"SGTs",
+        "distritos":"Distritos",
+        "ooaa":"OO.AA"
     }
 }
