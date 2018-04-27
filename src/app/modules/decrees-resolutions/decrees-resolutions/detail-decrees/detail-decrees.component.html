@@ -1,3 +1,6 @@
-<p>
-  detail-decrees works!
-</p>
+<app-secundary-nav (optionSelected)="getOptionSelected($event)"
+                    [titulos]="titulos"></app-secundary-nav>
+<app-list-folder  *ngIf="isSelected === titulos[1]"
+                    [listDetailsAgreement]="list_details_agreement"
+                    (resultModal)="getResultModal($event)">
+  </app-list-folder>

@@ -10,6 +10,7 @@ import { NgxPaginationModule} from 'ngx-pagination';
 import { ListCriteriaDecreesComponent } from './decrees-resolutions/list-criteria-decrees/list-criteria-decrees.component';
 import { DecreesResolutionsService } from './services/decrees-resolutions.service';
 import { DetailDecreesComponent } from './decrees-resolutions/detail-decrees/detail-decrees.component';
+import { CommonsElementsModule } from '../../commons-elements/commons-elements.module';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -25,12 +26,14 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    NgxPaginationModule
+    NgxPaginationModule,
+    CommonsElementsModule
   ],
   declarations: [
     DecreesResolutionsComponent, 
     SearchCriteriaDecreesComponent, 
-    ListCriteriaDecreesComponent, DetailDecreesComponent
+    ListCriteriaDecreesComponent, 
+    DetailDecreesComponent
   ],
   providers:[
     DecreesResolutionsService
