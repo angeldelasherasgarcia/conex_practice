@@ -8,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 export class SecundaryNavComponent implements OnInit {
   @Input() titulos:string;
   @Output() optionSelected = new EventEmitter();
-  public isSelected: string;
+  @Input() isSelected: string;
   constructor() { }
 
   ngOnInit() {

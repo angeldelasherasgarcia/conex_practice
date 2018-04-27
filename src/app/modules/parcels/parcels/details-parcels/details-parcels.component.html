@@ -1,5 +1,6 @@
 <app-secundary-nav (optionSelected)="getOptionSelected($event)"
-                    [titulos]="titulos"></app-secundary-nav>
+                    [titulos]="titulos"
+                    [isSelected]="isSelected"></app-secundary-nav>
 <app-detail *ngIf="isSelected === titulos[0]"
             [detailParcel]="detail_parcel">
 </app-detail>

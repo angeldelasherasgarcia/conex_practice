@@ -37,7 +37,10 @@ export class DetailDecreesComponent implements OnInit {
           }
         }
       )
-    };
+    }
+  }
+  public returnOption(){
+    this.isSelected = this.titulos[0];
   }
   public callService(){
     this.decreesService.getListaDetalleEncomiendas().subscribe(
