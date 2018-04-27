@@ -12,6 +12,7 @@ export class DetailsParcelsComponent implements OnInit {
   public isSelected: string = 'convenios';
   public list_details_agreement: any[];
   public list_realted: any[];
+  public detail_parcel:any[];
   public titulos = [];
   constructor(public parcelsService: ParcelsService,
     public conveniosService: ConveniosService,
@@ -38,6 +39,11 @@ export class DetailsParcelsComponent implements OnInit {
       error => {
 
       })
+      this.parcelsService.getEncomiendaDetalle().subscribe(
+        result =>{
+          this.detail_parcel = result;
+        }
+      )
   }
   public getResultModal(event): void {
     var separador = "++";

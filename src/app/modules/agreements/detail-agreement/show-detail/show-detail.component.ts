@@ -7,7 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ShowDetailComponent implements OnInit {
   @Input() detailAgreement: any ;
-  public prueba:any;
   constructor() {
     this.initObject();
   }

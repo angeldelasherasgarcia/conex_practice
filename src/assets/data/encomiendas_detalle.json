@@ -1,0 +1,24 @@
+{
+  "fecha_formalizacion": "2017-03-13T06:57:47 -01:00",
+  "num_expediente": 0,
+  "tipo_aprobacion": "Ericka Melton",
+  "titulo_objeto": "Weeks Maynard",
+  "encomendante": {
+    "encomendante": "Coleen Watkins",
+    "obligado": "Ofelia Cotton"
+  },
+  "encomendado": {
+    "encomendado": "Mclean Mckinney",
+    "obligado": "Natalie Abbott"
+  },
+  "vigencia": {
+    "desde": "2015-05-24T03:16:56 -02:00",
+    "hasta": "2017-07-28T11:32:47 -02:00"
+  },
+  "importe": {
+    "desde": 0,
+    "hasta": 0
+  },
+  "materia": "Holman Landry",
+  "anexos": "Ford Callahan"
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-detail',
@@ -6,11 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-    console.log('entrra')
+  @Input() detailParcel:any;
+  constructor() { 
+    
   }
-
+  ngOnInit(): void {
+  }
 }

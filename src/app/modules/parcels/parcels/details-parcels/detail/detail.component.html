@@ -1,4 +1,4 @@
-<div  class="border-box header_div">
+<div *ngIf="detailParcel" class="border-box header_div">
   <div class="title-box">
     {{'show-details-agreements.datos_convenio' | translate}}
   </div>
@@ -11,7 +11,8 @@
         <div class="body_box">
           <input  type="text" 
                   class="new_form_control margin_input" 
-                  name="num_convenio"
+                  name="fecha_formalizacion"
+                  [(ngModel)]="detailParcel.fecha_formalizacion"
                   disabled>
         </div>
       </div>
@@ -20,8 +21,11 @@
           {{'show-details-agreements.num_expediente' | translate}}
         </div>
         <div class="body_box">
-          <input type="text" class="new_form_control margin_input"  name="num_expediente"
-            disabled>
+          <input  type="text" 
+                  class="new_form_control margin_input"  
+                  name="num_expediente"
+                  [(ngModel)]="detailParcel.num_expediente"
+                  disabled>
         </div>
       </div>
       <div class="col">
@@ -29,8 +33,11 @@
           {{'show-details-parcels.tipo_aprobacion' | translate}}
         </div>
         <div class="body_box">
-          <input type="text" class="new_form_control margin_input"  name="tipo_aprobacion"
-            disabled>
+          <input  type="text" 
+                  class="new_form_control margin_input"  
+                  name="tipo_aprobacion"
+                  [(ngModel)]="detailParcel.tipo_aprobacion"
+                  disabled>
         </div>
       </div>
     </div>
@@ -39,9 +46,10 @@
         <form class="form-inline margin_form">
           <label class="my-1 mr-2">{{'show-details-agreements.titulo' | translate}}</label>
           <select class="custom-select margin_select" 
-                  name="titulo" 
+                  name="titulo_objeto"
+                  [(ngModel)]="detailParcel.titulo_objeto"
                   disabled>
-                  <option >Default</option>
+                  <option >{{detailParcel.titulo_objeto}}</option>
           </select>
         </form>
       </div>
@@ -56,14 +64,18 @@
             <div class="col">
               {{'show-details-parcels.encomendante' | translate}}
               <input type="text" 
-                      class="new_form_control margin_input" 
+                      class="new_form_control margin_input"
                       name="encomendante"
+                      [(ngModel)]="detailParcel.encomendante.encomendante"
                       disabled>
             </div>
             <div class="col">
               {{'show-details-agreements.obligados' | translate}}
-              <input type="text" class="new_form_control margin_input"  name="obligatorios"
-                disabled>
+              <input  type="text" 
+                      class="new_form_control margin_input"  
+                      name="obligados"
+                      [(ngModel)]="detailParcel.encomendante.obligados"
+                      disabled>
             </div>
           </div>
         </div>
@@ -78,13 +90,19 @@
           <div class="row">
             <div class="col">
               {{'show-details-parcels.encomendado' | translate}}
-              <input type="text" class="new_form_control margin_input"  name="entidad"
-                disabled>
+              <input  type="text" 
+                      class="new_form_control margin_input"  
+                      name="encomendado"
+                      [(ngModel)]="detailParcel.encomendado.encomendado"
+                      disabled>
             </div>
             <div class="col">
               {{'show-details-agreements.obligados' | translate}}
-              <input type="text" class="new_form_control margin_input"  name="obligados"
-                disabled>
+              <input  type="text" 
+                      class="new_form_control margin_input"  
+                      name="obligado"
+                      [(ngModel)]="detailParcel.encomendado.obligado"
+                      disabled>
             </div>
           </div>
         </div>
@@ -101,7 +119,11 @@
               <label for="desde">{{'show-details-agreements.desde' | translate}}</label>
             </div>
             <div class="col-sm-8">
-              <input type="text" class="new_form_control margin_input"  name="desde" disabled>
+              <input  type="text" 
+                      class="new_form_control margin_input"  
+                      name="desde"
+                      [(ngModel)]="detailParcel.vigencia.desde" 
+                      disabled>
             </div>
           </div>
           <div class="form-group row margin_doble_input_box">
@@ -109,7 +131,11 @@
               <label for="hasta">{{'show-details-agreements.hasta' | translate}}</label>
             </div>
             <div class="col-sm-8">
-              <input type="text" class="new_form_control margin_input"  name="hasta" disabled>
+              <input  type="text" 
+                      class="new_form_control margin_input"  
+                      name="hasta"
+                      [(ngModel)]="detailParcel.vigencia.hasta"
+                      disabled>
             </div>
           </div>
         </div>
@@ -124,7 +150,11 @@
               <label for="ingresos">{{'show-details-agreements.ingresos' | translate}}</label>
             </div>
             <div class="col-sm-8">
-              <input type="text" class="new_form_control margin_input"  name="ingresos" disabled>
+              <input  type="text" 
+                      class="new_form_control margin_input"  
+                      name="ingresos"
+                      [(ngModel)]="detailParcel.importe.desde" 
+                      disabled>
             </div>
           </div>
           <div class="form-group row margin_doble_input_box">
@@ -132,7 +162,11 @@
               <label for="gastos">{{'show-details-agreements.gastos' | translate}}</label>
             </div>
             <div class="col-sm-8">
-              <input type="text" class="new_form_control margin_input"  name="gastos" disabled>
+              <input  type="text" 
+                      class="new_form_control margin_input"
+                      [(ngModel)]="detailParcel.importe.hasta"   
+                      name="gastos" 
+                      disabled>
             </div>
           </div>
         </div>
@@ -143,7 +177,11 @@
         <div class="form-group row" style="margin-left: 28%">
           <label for="inputPassword">{{'show-details-parcels.materia' | translate}}</label>
           <div class="col-sm-8">
-            <input type="text" class="new_form_control margin_input_3col"  name="prorroga" disabled>
+            <input  type="text" 
+                    class="new_form_control margin_input_3col"  
+                    name="materia"
+                    [(ngModel)]="detailParcel.materia" 
+                    disabled>
           </div>
         </div>
       </div>
@@ -151,7 +189,11 @@
         <div class="form-group row" style="margin-left: 20%">
           <label for="inputPassword">{{'show-details-parcels.anexos' | translate}}</label>
           <div class="col-sm-8">
-            <input type="text" class="new_form_control margin_input_3col"  name="duracion" disabled>
+            <input  type="text" 
+                    class="new_form_control margin_input_3col"  
+                    name="anexos"
+                    [(ngModel)]="detailParcel.anexos"
+                    disabled>
           </div>
         </div>
       </div>
