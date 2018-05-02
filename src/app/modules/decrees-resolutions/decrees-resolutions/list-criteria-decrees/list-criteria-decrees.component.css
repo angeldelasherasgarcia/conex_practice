@@ -1,3 +1,6 @@
 .fileTable:hover{
     cursor: pointer;
 }
+.headerFile:hover{
+    cursor: pointer;
+}

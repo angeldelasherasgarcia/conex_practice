@@ -1,16 +1,29 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col" style="width: 20%">{{'list-decrees.num_decreto' | translate}}</th>
-      <th scope="col" style="width: 20%">{{'list-decrees.area' | translate}}</th>
-      <th scope="col" style="width: 10%">{{'list-decrees.tipo' | translate}}</th>
-      <th scope="col" style="width: 10%">{{'list-decrees.fecha' | translate}}</th>
-      <th scope="col" style="width: 45%">{{'list-decrees.descripcion' | translate}}</th>
+      <th class="headerFile"
+          scope="col" 
+          style="width: 20%"
+          (click)="changeOrder('num_decreto')">{{'list-decrees.num_decreto' | translate}}</th>
+      <th class="headerFile" 
+          scope="col" 
+          style="width: 20%"
+          (click)="changeOrder('area')">{{'list-decrees.area' | translate}}</th>
+      <th class="headerFile" 
+          scope="col" 
+          style="width: 10%"
+          (click)="changeOrder('tipo')">{{'list-decrees.tipo' | translate}}</th>
+      <th class="headerFile"
+          scope="col" 
+          style="width: 10%"
+          (click)="changeOrder('fecha')">{{'list-decrees.fecha' | translate}}</th>
+      <th scope="col" 
+          style="width: 45%">{{'list-decrees.descripcion' | translate}}</th>
     </tr>
   </thead>
   <tbody >
     <tr class="fileTable"
-        *ngFor="let lista of list_decretos | paginate :{itemsPerPage: 7 , currentPage:pagination}"
+        *ngFor="let lista of list_decretos | paginate :{itemsPerPage: 7 , currentPage:pagination}|order:orderBy:ascending"
         (click)="showDetails(lista)">
       <td style="width: 20%">{{lista.num_decreto}}</td>
       <td style="width: 20%">{{lista.area}}</td>

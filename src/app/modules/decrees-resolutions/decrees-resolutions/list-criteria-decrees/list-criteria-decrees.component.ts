@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
 })
 export class ListCriteriaDecreesComponent implements OnInit {
   public list_decretos:any;
+  public orderClicked: boolean = false;
+  public orderBy: string;
+  public ascending: boolean = false;
   constructor(public decreesService: DecreesResolutionsService,
               public router: Router) { }
 
@@ -26,5 +29,14 @@ export class ListCriteriaDecreesComponent implements OnInit {
   }
   public showDetails(lista):void{
     this.router.navigate(['detail-decrees']);
+  }
+  changeOrder(param) {
+    this.orderClicked = true;
+    if (this.orderBy === param) {
+      this.ascending = !this.ascending;
+    } else {
+      this.ascending = true;
+      this.orderBy = param
+    }
   }
 }

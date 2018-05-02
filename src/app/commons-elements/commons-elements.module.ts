@@ -8,6 +8,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgxPaginationModule} from 'ngx-pagination';
 import { ListRelatedComponent } from './list-related/list-related.component';
+import { OrderPipe } from './../pipes/order.pipe'
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -27,12 +28,14 @@ export function createTranslateLoader(http: HttpClient) {
       SecundaryNavComponent,
       ModalDownloadFileComponent, 
       ListFolderComponent, 
-      ListRelatedComponent],
+      ListRelatedComponent,
+      OrderPipe],
   exports:[
     SecundaryNavComponent,
     ModalDownloadFileComponent,
     ListFolderComponent,
-    ListRelatedComponent
+    ListRelatedComponent,
+    OrderPipe
   ],
   entryComponents: [
     ModalDownloadFileComponent]
