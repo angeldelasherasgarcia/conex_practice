@@ -112,5 +112,18 @@
         "tipo":"Tipo:",
         "fecha":"Fecha:",
         "descripcion":"Descripción:"
+    },
+    "detail-decrees":{
+        "titulo":"Datos del Decreto/Resolución",
+        "tipo":"Tipo:",
+        "organo_resolucion":"Órgano de resolución:",
+        "materia":"Materia:",
+        "denominacion_decreto":"Denominación del decreto/resolución:",
+        "interesado":"Interesado:",
+        "estado":"Estado:",
+        "situacion_fisica":"Situación física:",
+        "sgt":"S.G.T. :",
+        "area":"Area:",
+        "num_exp":"Nº Expediente:"
     }
 }

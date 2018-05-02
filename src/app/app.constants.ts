@@ -8,3 +8,4 @@ export const LISTA_ENCOMIENDAS = './assets/data/lista_encomiendas.json';
 export const LISTADO_DETALLE_ENCOMIENDA = './assets/data/listado-detalle-encomienda.json';
 export const ENCOMIENDA_DETALLE = './assets/data/encomiendas_detalle.json';
 export const LIST_DECREES = './assets/data/list-decrees.json';
+export const DETAILS_DECREES = './assets/data/details_decrees.json';

@@ -1,0 +1,123 @@
+<div  class="border-box header_div">
+  <div class="title-box">
+    {{'detail-decrees.titulo' | translate}}
+  </div>
+  <div class="body-box">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="body_box" style="margin-top: 2%;">
+          <li>
+            <a class="black_letters">{{'detail-decrees.estado' | translate}}</a>
+            <a>{{detailDecrees.decreto.estado}}</a>
+          </li>
+          <li>
+            <a class="black_letters">{{'detail-decrees.situacion_fisica' | translate}}</a>
+            <a>{{detailDecrees.decreto.situacion_fisica}}</a>
+          </li>
+          <li>
+            <a class="black_letters">{{'detail-decrees.sgt' | translate}}</a>
+            <a>{{detailDecrees.decreto.sgt}}</a>
+          </li>
+          <li>
+            <a class="black_letters">{{'detail-decrees.area' | translate}}</a>
+            <a>{{detailDecrees.decreto.area}}</a>
+          </li>
+          <li >
+            <a class="black_letters">{{'detail-decrees.num_exp' | translate}}</a>
+            <a>{{detailDecrees.decreto.num_exped}}</a>
+          </li>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="title-box border-box big_box_header">
+          {{'detail-decrees.tipo' | translate}}
+        </div>
+        <div class="body_big_box">
+          <div class="row">
+            <div class="col">
+              <input  type="text" 
+                      class="new_form_control margin_input"  
+                      name="tipo"
+                      [(ngModel)]="detailDecrees.tipo"
+                      disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="title-box border-box big_box_header">
+          {{'detail-decrees.organo_resolucion' | translate}}
+        </div>
+        <div class="body_big_box">
+          <div class="row">
+            <div class="col">
+              <input  type="text" 
+                      class="new_form_control margin_input"  
+                      name="organo_resolucion"
+                      [(ngModel)]="detailDecrees.organo_resolucion"
+                      disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="title-box border-box big_box_header">
+          {{'detail-decrees.materia' | translate}}
+        </div>
+        <div class="body_big_box">
+          <div class="row">
+            <div class="col">
+              <input  type="text" 
+                      class="new_form_control margin_input"  
+                      name="materia"
+                      [(ngModel)]="detailDecrees.materia"
+                      disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="title-box border-box big_box_header">
+          {{'detail-decrees.denominacion_decreto' | translate}}
+        </div>
+        <div class="body_big_box">
+          <div class="row">
+            <div class="col">
+              <input  type="text" 
+                      class="new_form_control margin_input"  
+                      name="denominacion"
+                      [(ngModel)]="detailDecrees.denominacion"
+                      disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="title-box border-box big_box_header">
+          {{'detail-decrees.interesado' | translate}}
+        </div>
+        <div class="body_big_box">
+          <div class="row">
+            <div class="col">
+              <input  type="text" 
+                      class="new_form_control margin_input"  
+                      name="interesado"
+                      [(ngModel)]="detailDecrees.interesado"
+                      disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

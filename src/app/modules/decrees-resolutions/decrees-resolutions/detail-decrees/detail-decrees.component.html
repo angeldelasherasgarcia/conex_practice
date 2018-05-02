@@ -1,13 +1,16 @@
 <app-secundary-nav (optionSelected)="getOptionSelected($event)"
                     [titulos]="titulos"
                     [isSelected]="isSelected"></app-secundary-nav>
+<app-list-detail *ngIf="isSelected === titulos[0]"
+                 [detailDecrees]="detail_decrees">
+</app-list-detail>
 <app-list-folder  *ngIf="isSelected === titulos[1]"
                     [listDetailsAgreement]="list"
                     (resultModal)="getResultModal($event)">
-  </app-list-folder>
-  <button *ngIf="isSelected !== titulos[0]" 
-  type="button" 
-  class="btn btn-default"
-  (click)="returnOption()">
-Volver
+</app-list-folder>
+<button *ngIf="isSelected !== titulos[0]" 
+        type="button" 
+        class="btn btn-default"
+        (click)="returnOption()">
+        Volver
 </button>

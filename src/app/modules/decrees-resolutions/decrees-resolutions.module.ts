@@ -11,6 +11,7 @@ import { ListCriteriaDecreesComponent } from './decrees-resolutions/list-criteri
 import { DecreesResolutionsService } from './services/decrees-resolutions.service';
 import { DetailDecreesComponent } from './decrees-resolutions/detail-decrees/detail-decrees.component';
 import { CommonsElementsModule } from '../../commons-elements/commons-elements.module';
+import { ListDetailComponent } from './decrees-resolutions/detail-decrees/list-detail/list-detail.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -33,7 +34,7 @@ export function createTranslateLoader(http: HttpClient) {
     DecreesResolutionsComponent, 
     SearchCriteriaDecreesComponent, 
     ListCriteriaDecreesComponent, 
-    DetailDecreesComponent
+    DetailDecreesComponent, ListDetailComponent
   ],
   providers:[
     DecreesResolutionsService

@@ -12,6 +12,7 @@ export class DetailDecreesComponent implements OnInit {
   public isSelected : String;
   public titulos = [];
   public list : any;
+  public detail_decrees: any;
   constructor(public decreesService: DecreesResolutionsService,
               public conveniosService: ConveniosService,
               public globalService: GlobalVariableService) { }
@@ -48,6 +49,14 @@ export class DetailDecreesComponent implements OnInit {
         this.list = result;
       },
       error =>{
+
+      }
+    )
+    this.decreesService.getDetalleEncomiendas().subscribe(
+      result=>{
+        this.detail_decrees = result;
+      },
+      error=>{
 
       }
     )
