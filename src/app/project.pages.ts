@@ -11,3 +11,6 @@ export {
 export {
     DetailDecreesComponent
 }from './modules/decrees-resolutions/decrees-resolutions/detail-decrees/detail-decrees.component';
+export{
+    GenericWindowComponent
+}from './commons-elements/generic-window/generic-window.component';

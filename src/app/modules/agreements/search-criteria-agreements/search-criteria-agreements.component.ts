@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ConveniosService } from './../../../services/convenios/convenios.service';
 import { ErrorComponent } from '../../../layouts/error/error.component';
+
 @Component({
   selector: 'app-search-criteria-agreements',
   templateUrl: './search-criteria-agreements.component.html',
@@ -76,4 +77,5 @@ export class SearchCriteriaAgreementsComponent implements OnInit {
       }
     )
   }
+ 
 }

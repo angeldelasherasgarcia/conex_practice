@@ -1,19 +1,15 @@
-
-  <div class="row margin-form">
-    <div class="col-md-11 header_serach_criteria">
-      {{'search-criteria-decrees.titulo_busqueda' | translate}}
-    </div>
+<div class="row margin-form">
+  <div class="col-md-11 header_serach_criteria">
+    {{'search-criteria-decrees.titulo_busqueda' | translate}}
   </div>
-  <form (ngSubmit)="searchCriteriaDecrees()">
+</div>
+<form (ngSubmit)="searchCriteriaDecrees()">
   <div class="row margin-form">
     <div class="col-md-1 offset-md-1">
       {{'search-criteria-decrees.titulo' | translate}}
     </div>
     <div class="col-md-4 offset-md-1">
-      <input  type="text" 
-              class="form-control" 
-              name="titulo"
-              [(ngModel)]="decretos.titulo">
+      <input type="text" class="form-control" name="titulo" [(ngModel)]="decretos.titulo">
     </div>
   </div>
   <div class="row margin-form">
@@ -21,10 +17,7 @@
       {{'buscador-encomiendas.organo-responsable' | translate}}
     </div>
     <div class="col-md-8 ">
-      <select class="custom-select" 
-              name="organosResponsables"
-              (change)="hiddenDefaultOption()"
-              [(ngModel)]="decretos.organo_responsable">
+      <select class="custom-select" name="organosResponsables" (change)="hiddenDefaultOption()" [(ngModel)]="decretos.organo_responsable">
         <option [hidden]="hiddenDefault">Selecione</option>
         <option *ngFor="let organos of organosResponsables">{{organos}}</option>
       </select>
@@ -35,10 +28,7 @@
       {{'search-criteria-decrees.organo-resolucion' | translate}}
     </div>
     <div class="col-md-8 ">
-      <select class="custom-select" 
-              name="organo_resolucion"
-              (change)="hiddenDefaultOption()"
-              [(ngModel)]="decretos.organo_resolucion">
+      <select class="custom-select" name="organo_resolucion" (change)="hiddenDefaultOption()" [(ngModel)]="decretos.organo_resolucion">
         <option [hidden]="hiddenDefault">Selecione</option>
         <option *ngFor="let organos of organosResponsables">{{organos}}</option>
       </select>
@@ -52,19 +42,13 @@
       {{'buscador-encomiendas.desde' | translate}}
     </div>
     <div class="col-md-3">
-      <input  type="date" 
-              class="form-control" 
-              name="desde"
-              [(ngModel)]="decretos.fecha_aportacion_desde">
+      <input type="date" class="form-control" name="desde" [(ngModel)]="decretos.fecha_aportacion_desde">
     </div>
     <div class="col-md-1 ">
       {{'buscador-encomiendas.hasta' | translate}}
     </div>
     <div class="col-md-3">
-      <input  type="date" 
-              class="form-control" 
-              name="hasta"
-              [(ngModel)]="decretos.fecha_aportacion_hasta">
+      <input type="date" class="form-control" name="hasta" [(ngModel)]="decretos.fecha_aportacion_hasta">
     </div>
   </div>
   <div class="row margin-form">
@@ -72,17 +56,9 @@
       {{'search-criteria-decrees.num_decreto' | translate}}
     </div>
     <div class="col-md-8  form-inline">
-      <input  type="text" 
-              class="form-control" 
-              name="num_decreto_0" 
-              style="width: 10%"
-              [(ngModel)]="decretos.num_decreto_0">
+      <input type="text" class="form-control" name="num_decreto_0" style="width: 10%" [(ngModel)]="decretos.num_decreto_0">
       <input type="text" class="form-control" placeholder="/" name="titulo-objeto" style="width: 5%" readonly>
-      <input  type="text" 
-              class="form-control" 
-              name="num_decreto_1" 
-              style="width: 10%"
-              [(ngModel)]="decretos.num_decreto_1">
+      <input type="text" class="form-control" name="num_decreto_1" style="width: 10%" [(ngModel)]="decretos.num_decreto_1">
     </div>
   </div>
   <div class="row margin-form">
@@ -90,10 +66,7 @@
       {{'search-criteria-decrees.num_expediente' | translate}}
     </div>
     <div class="col-md-8">
-      <input  type="text" 
-              class="form-control" 
-              name="num_expediente"
-              [(ngModel)]="decretos.num_expediente">
+      <input type="text" class="form-control" name="num_expediente" [(ngModel)]="decretos.num_expediente">
     </div>
   </div>
   <div class="row margin-form">
@@ -101,14 +74,16 @@
       {{'search-criteria-decrees.nombre_razon' | translate}}
     </div>
     <div class="col-md-8">
-      <input  type="text" 
-              class="form-control" 
-              name="razon_social"
-              [(ngModel)]="decretos.razon_social">
+      <input type="text" class="form-control" name="razon_social" [(ngModel)]="decretos.razon_social">
     </div>
   </div>
-  <button type="submit" 
-          class="btn btn-default margin-button">
+  <button type="submit" class="btn btn-default margin-button">
     {{'buscador.buscar' | translate}}
   </button>
 </form>
+<button class="btn btn-default" (click)="pruebaModal()">
+  abrir modal
+</button>
+<button class="btn btn-default" (click)="pruebaVentanaGenerica()">
+  abrir ventana generica
+</button>

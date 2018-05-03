@@ -8,7 +8,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgxPaginationModule} from 'ngx-pagination';
 import { ListRelatedComponent } from './list-related/list-related.component';
-import { OrderPipe } from './../pipes/order.pipe'
+import { OrderPipe } from './../pipes/order.pipe';
+import { ModalOneButtonComponent } from './modal-one-button/modal-one-button.component';
+import { ModalTwoButtonComponent } from './modal-two-button/modal-two-button.component';
+import { GenericWindowComponent } from './generic-window/generic-window.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -29,15 +32,22 @@ export function createTranslateLoader(http: HttpClient) {
       ModalDownloadFileComponent, 
       ListFolderComponent, 
       ListRelatedComponent,
-      OrderPipe],
+      OrderPipe,
+      ModalOneButtonComponent,
+      ModalTwoButtonComponent,
+      GenericWindowComponent],
   exports:[
     SecundaryNavComponent,
     ModalDownloadFileComponent,
     ListFolderComponent,
     ListRelatedComponent,
-    OrderPipe
+    OrderPipe,
+    ModalOneButtonComponent,
+    ModalTwoButtonComponent
   ],
   entryComponents: [
-    ModalDownloadFileComponent]
+    ModalDownloadFileComponent,
+    ModalOneButtonComponent,
+    ModalTwoButtonComponent]
 })
 export class CommonsElementsModule { }

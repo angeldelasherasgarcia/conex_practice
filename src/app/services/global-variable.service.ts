@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class GlobalVariableService {
    public currentShowPage : String;
+   public text_window:string;
+   public ubicacion_imagen:string;
   constructor() { }
   /**
    * 
