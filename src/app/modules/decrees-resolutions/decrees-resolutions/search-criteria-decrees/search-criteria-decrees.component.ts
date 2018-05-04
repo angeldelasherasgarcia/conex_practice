@@ -50,8 +50,8 @@ export class SearchCriteriaDecreesComponent implements OnInit {
     this.modal = this.modalService.open(ModalTwoButtonComponent);
     this.modal.componentInstance.titulo = "Ejemplo titulo";
     this.modal.componentInstance.texto_modal = "Ejemplo texto_modal";
-    this.modal.componentInstance.texto_boton1 = "Cerrar";
-    this.modal.componentInstance.texto_boton2 = "Abrir";
+    this.modal.componentInstance.texto_boton1 = "Si";
+    this.modal.componentInstance.texto_boton2 = "No";
     this.modal.result.then((resultModal) => {
       console.log("El resultado del modal es "+ resultModal);
     })
