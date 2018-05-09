@@ -8,7 +8,8 @@ import { AgreementsComponent,
          DetailsParcelsComponent,
          ListCriteriaDecreesComponent,
          DetailDecreesComponent,
-         GenericWindowComponent
+         GenericWindowComponent,
+         CountDownComponent
         } from "./project.pages";
 const routes: Routes = [
     { path: '', component: AgreementsComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
     { path: 'list_parcels', component: ListParcelsComponent },
     { path: 'details_parcels', component: DetailsParcelsComponent },
     { path: 'generic_window', component: GenericWindowComponent },
+    { path: 'count_down', component: CountDownComponent },
     { path: '**', component: AgreementsComponent }
 ];
 export const app_routing = RouterModule.forRoot(routes, {useHash:true})

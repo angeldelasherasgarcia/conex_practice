@@ -5,7 +5,7 @@
         "convenios":"Convenios",
         "encomiendas":"Encomiendas",
         "decretos_resoluciones":"Decretos y resoluciones",
-        "accesos":"Accesos",
+        "accesos":"Contador",
         "administracion":"Administración"
     },
     "buscador":{
@@ -85,7 +85,7 @@
        "num_encomienda":"Nº encomienda",
        "fecha_formalizacion":"Fecha de formalización:",
        "titulo":"Titulo:",
-       "vigencia":"Vigencia:" 
+       "vigencia":"Vigencia:"
     },
     "show-details-parcels":{
         "tipo_aprobacion":"Tipo Aprobación:",
@@ -97,10 +97,10 @@
     "search-criteria-decrees":{
         "titulo_busqueda":"Criterios de busqueda Decretos/Resoluciones",
         "titulo":"Título:",
-        "organo-resolucion":"Órgano de resolución:", 
-        "fecha-aprobacion":"Fecha de Aprobación:", 
+        "organo-resolucion":"Órgano de resolución:",
+        "fecha-aprobacion":"Fecha de Aprobación:",
         "num_decreto":"Nº de Decreto/Resolución:",
-        "num_expediente":"Nº Expediente:", 
+        "num_expediente":"Nº Expediente:",
         "nombre_razon":"Nombre/Razón social:",
         "sgts":"SGTs",
         "distritos":"Distritos",

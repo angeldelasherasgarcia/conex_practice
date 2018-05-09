@@ -27,6 +27,7 @@ import { ShowDetailComponent } from './modules/agreements/detail-agreement/show-
 import { FoldersComponent } from './modules/agreements/detail-agreement/folders/folders.component';
 import { RelatedComponent } from './modules/agreements/detail-agreement/related/related.component';
 import { ModalTwoButtonComponent } from './layouts/modal-two-button/modal-two-button.component';
+import { CountDownComponent } from './modules/count-down/count-down/count-down.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -45,7 +46,8 @@ export function createTranslateLoader(http: HttpClient) {
     ShowDetailComponent,
     FoldersComponent,
     RelatedComponent,
-    ModalTwoButtonComponent
+    ModalTwoButtonComponent,
+    CountDownComponent
   ],
   imports: [
     BrowserModule,

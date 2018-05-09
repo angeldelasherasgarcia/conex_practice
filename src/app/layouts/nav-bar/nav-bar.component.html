@@ -23,7 +23,8 @@
                 routerLink="/decrees">
                 {{'nav_bar.decretos_resoluciones' | translate}}
             </li>
-            <li [ngClass]="{'is_active': isActive ==='accesos' , 'not_active': isActive !=='accesos' }">
+            <li [ngClass]="{'is_active': isActive ==='accesos' , 'not_active': isActive !=='accesos' }" (click)="showModel('accesos')"
+                routerLink="/count_down">
                 {{'nav_bar.accesos' | translate}}
             </li>
             <li [ngClass]="{'is_active': isActive ==='administracion' , 'not_active': isActive !=='administracion' }">

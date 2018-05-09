@@ -1,3 +1,4 @@
+import { SearchCriteriaAgreementsComponent } from './search-criteria-agreements/search-criteria-agreements.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

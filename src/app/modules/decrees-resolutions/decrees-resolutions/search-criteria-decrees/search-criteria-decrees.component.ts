@@ -47,10 +47,10 @@ export class SearchCriteriaDecreesComponent implements OnInit {
     this.hiddenDefault = true;
   }
   public pruebaModal():void{
-    this.modal = this.modalService.open(ModalTwoButtonComponent);
+    this.modal = this.modalService.open(ModalOneButtonComponent);
     this.modal.componentInstance.titulo = "Ejemplo titulo";
     this.modal.componentInstance.texto_modal = "Ejemplo texto_modal";
-    this.modal.componentInstance.texto_boton1 = "Si";
+    this.modal.componentInstance.texto_boton = "Angel";
     this.modal.componentInstance.texto_boton2 = "No";
     this.modal.result.then((resultModal) => {
       console.log("El resultado del modal es "+ resultModal);
