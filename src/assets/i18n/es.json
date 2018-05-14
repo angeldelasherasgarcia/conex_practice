@@ -125,5 +125,8 @@
         "sgt":"S.G.T. :",
         "area":"Area:",
         "num_exp":"Nº Expediente:"
+    },
+    "errores":{
+      "comparar_fecha":"La fecha desde no puede ser superior a la fecha hasta"
     }
 }

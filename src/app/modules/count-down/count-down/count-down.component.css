@@ -1,0 +1,13 @@
+.back_clock{
+  font-family:danger ;
+  background-color: black;
+  color: white ;
+  top:0;
+  bottom: 0;
+  font-size: 100px;
+}
+.university{
+  font-family:railway !important;
+  font-size: 90px;
+  color: yellow;
+}

@@ -24,3 +24,7 @@
     color: white;
     text-align: center;
 }
+.input-error{
+  border: 1px solid red !important;
+  background-color: rgb(248, 239, 239) !important;
+}

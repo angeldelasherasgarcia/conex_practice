@@ -1,5 +1,25 @@
 .router-definition{
     margin-left: 18%;
     background-color:#F6F6F6;
-    width: 80%; 
+    width: 80%;
+}
+@font-face {
+  font-family: globos;
+  src: URL('./../assets/pw_balloon/PWBalloon.ttf');
+}
+@font-face {
+  font-family: universidad;
+  src: URL('./../assets/universidad/use.ttf');
+}
+@font-face {
+  font-family: secret;
+  src: URL('./../assets/_top_secret/[TOP_SECRET].ttf');
+}
+@font-face {
+  font-family: danger;
+  src: URL('./../assets/another_danger/Another\ Danger\ -\ Demo.otf');
+}
+@font-face {
+  font-family: railway;
+  src: URL('./../assets/railway_to_hells/Railway\ to\ Hells.ttf');
 }
